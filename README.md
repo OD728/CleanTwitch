@@ -7,7 +7,7 @@ A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for 
 This CSS hides various clutter elements on Twitch.tv without breaking core functionality:
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
-- **Monetization**: Hides Bits and Cheer buttons 
+- **Monetization**: Hides Bits, Cheer buttons, and One-Tap Combos modal
 - **Social Elements**: Removes follow buttons and subscriber goals
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat header banner and collapse button
@@ -58,10 +58,10 @@ document.head.appendChild(style);
    
    Features:
    - Hides Stories sections and navigation
-   - Removes monetization buttons (Bits, Cheer)
+   - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
    - Minimizes chat distractions
-   - Hides upcoming streams panels and show more separators and show more separators
+   - Hides upcoming streams panels and show more separators
    - Makes info boxes transparent
    
    ========================================== */
@@ -170,6 +170,11 @@ div.Layout-sc-1xcs6mc-0.iHafKo,  /* Targets the content grid for "Upcoming Strea
     display: none !important;
 }
 
+/* Hide One-Tap Combos modal button */
+.oneTapIngressButton--inGsR {
+    display: none !important;
+}
+
 /* ==========================================
    CHAT ELEMENTS
    ========================================== */
@@ -201,6 +206,7 @@ div.Layout-sc-1xcs6mc-0.iHafKo,  /* Targets the content grid for "Upcoming Strea
 - **Upcoming Streams panels** (titles and content grids) - *primarily on /directory/following page*
 - **"Show more" line separators** on directory pages
 - **Bits and Cheer buttons**
+- **One-Tap Combos modal button**
 - **Chat header banner**
 - **Chat collapse button**
 
@@ -227,6 +233,13 @@ Want to keep some elements? Simply comment out or remove the corresponding CSS r
 /* To keep subscriber goals, comment out this rule: */
 /*
 .ldUFHV {
+    display: none !important;
+}
+*/
+
+/* To keep One-Tap Combos modal button, comment out this rule: */
+/*
+.oneTapIngressButton--inGsR {
     display: none !important;
 }
 */

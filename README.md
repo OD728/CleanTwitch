@@ -1,4 +1,4 @@
-# Twitch.tv Clutter Removal CSS
+# ClutterFree Twitch
 
 A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience.
 

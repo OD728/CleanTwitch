@@ -187,8 +187,6 @@ document.head.appendChild(style);
 - **Subscriber and follower goals**
 - **Event banners** (sub & TC notifications)
 - **Category buttons** in directory (Games, IRL, Music, Creative)
-- **Upcoming Streams panels** (titles and content grids) - *primarily on /directory/following page*
-- **"Show more" line separators** on directory pages
 - **Bits and Cheer buttons**
 - **One-Tap Combos modal button**
 - **Chat header banner**

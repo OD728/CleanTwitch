@@ -61,7 +61,6 @@ document.head.appendChild(style);
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
    - Minimizes chat distractions
-   - Hides upcoming streams panels and show more separators
    - Makes info boxes transparent
    
    ========================================== */
@@ -139,21 +138,6 @@ document.head.appendChild(style);
 /* Hide Games, IRL, Music, Creative category buttons in directory */
 .vertical-selector-card__container--lg {
     display: none;
-}
-
-/* The following rules are intended to hide the "Upcoming Streams" panel 
-  and the "show more" line separator specifically on the page:
-  https://www.twitch.tv/directory/following
-  Note: Standard CSS cannot restrict rules to a specific URL. 
-  This comment serves as a guide for manual application or for use with browser extensions 
-  that allow per-URL custom CSS.
-*/
-header[aria-label="Upcoming Streams"],
-div.Layout-sc-1xcs6mc-0.iqUbUe, /* Targets title containers for "Upcoming Streams" */
-div.Layout-sc-1xcs6mc-0.iHafKo,  /* Targets the content grid for "Upcoming Streams" */
-.Layout-sc-1xcs6mc-0.show-more__hidden /* Targets the "show more" line separator */
-{
-    display: none !important;
 }
 
 /* ==========================================

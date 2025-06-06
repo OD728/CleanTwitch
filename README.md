@@ -372,6 +372,22 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 This CSS is provided as-is for personal use. Feel free to modify and share.
 
+## 📋 Changelog
+
+### Latest Updates
+- **Added**: Hide One-Tap Combos modal button (`.oneTapIngressButton--inGsR`)
+- **Added**: Hide share button on channel pages (`button[data-a-target="share-button"]`)
+- **Fixed**: Improved "Upcoming Streams" targeting to prevent hiding legitimate channel listings on category pages
+- **Enhanced**: More comprehensive "Upcoming Streams" header removal with multiple selectors
+
+### Previous Features
+- Hide Stories sections and navigation elements
+- Remove monetization buttons (Bits, Cheer)
+- Clean up directory and profile elements
+- Minimize chat distractions
+- Hide "show more" separators
+- Make info boxes transparent
+
 ## 🤝 Contributing
 
 Found an element that should be hidden? CSS stopped working after a Twitch update?

@@ -163,7 +163,7 @@ button[data-a-target="share-button"] {
 
 
 /* ==========================================
-   VIEWER COUNT ELEMENTS (COMMENTED OUT)
+   VIEWER COUNT ELEMENTS
    ========================================== */
 
 /* Center the meta tray container */
@@ -307,19 +307,26 @@ button[aria-label="Cheer"] {
 - **One-Tap Combos modal button**
 - **Chat header banner**
 - **Chat collapse button**
+- **Viewer count SVG icon**
+- **Clock icon** in uptime display
 
-### 💡 Optional Viewer Count Customization
-The CSS includes commented-out code for customizing the viewer count display:
+### 💡 Modified Elements
+- **Viewer count and uptime display** - Centered and standardized font sizes
+- **Stream info box** - Made transparent background
+
+### 💡 Viewer Count Customization
+The CSS includes active styling for the viewer count display:
 - Centers viewer count and uptime elements
 - Hides viewer count and clock icons
 - Standardizes font sizes for consistency
 
-To enable these features, uncomment the relevant sections in the CSS file.
+To disable these features, comment out the relevant sections in the CSS file.
 
 ### ✅ What Stays Functional
 - **Chat messages** and chat input
 - **Video player** and controls
 - **Stream information** and titles
+- **Viewer count and uptime** (styled for cleaner appearance)
 - **Navigation** to channels and categories
 - **Search functionality** (just the icon and borders are hidden)
 - **All core Twitch features**
@@ -376,6 +383,45 @@ header:has(h2[data-a-target="upcoming-streams-header"]) {
 header[aria-label="Upcoming Streams"] + div,
 header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
+}
+*/
+
+/* To disable viewer count customization, comment out these rules: */
+/*
+.ffz--meta-tray {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.ScSvgWrapper-sc-wkgzod-0.cqgFFC.tw-svg {
+    display: none !important;
+}
+
+.ffz--native-viewers-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.live-time {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.ffz-i-clock {
+    display: none !important;
+}
+
+p[data-a-target="animated-channel-viewers-count"] {
+    font-size: 1.3rem !important;
+}
+
+.ffz-stat-text {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
 }
 */
 ```
@@ -463,7 +509,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
   - Changed Bits button selector to `button[data-a-target="top-nav-get-bits-button"]`
   - Changed Cheer button selector to `button[aria-label="Cheer"]`
 - **Added**: Hide search bar borders for cleaner appearance
-- **Added**: Optional viewer count customization section (commented out by default)
+- **Added**: Viewer count customization (enabled by default)
   - Centers viewer count and uptime display
   - Hides viewer count SVG and clock icons
   - Standardizes font sizes for consistency

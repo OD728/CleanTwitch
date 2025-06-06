@@ -511,7 +511,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - **Added**: Hide search bar borders for cleaner appearance
 - **Added**: Viewer count customization (enabled by default)
   - Centers viewer count and uptime display
-  - Hides viewer count SVG and clock icons
+  - Hides viewer count Icon for Stream Together and clock icons (FFZ)
   - Standardizes font sizes for consistency
 - **Enhanced**: Code organization and documentation
 

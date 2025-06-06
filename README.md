@@ -1,4 +1,4 @@
-# ClutterFree Twitch
+# Twitch.tv Clutter Removal CSS
 
 A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience.
 
@@ -8,7 +8,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
 - **Monetization**: Hides Bits, Cheer buttons, and One-Tap Combos modal
-- **Social Elements**: Removes follow buttons and subscriber goals
+- **Social Elements**: Removes follow buttons, share buttons, and subscriber goals
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat header banner and collapse button
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
@@ -61,6 +61,7 @@ document.head.appendChild(style);
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
    - Minimizes chat distractions
+   - Hides upcoming streams panels and show more separators
    - Makes info boxes transparent
    
    ========================================== */
@@ -112,6 +113,11 @@ document.head.appendChild(style);
     display: none !important;
 }
 
+/* Hide share button on channel pages */
+button[data-a-target="share-button"] {
+    display: none !important;
+}
+
 /* ==========================================
    STREAM & CONTENT ELEMENTS
    ========================================== */
@@ -138,6 +144,37 @@ document.head.appendChild(style);
 /* Hide Games, IRL, Music, Creative category buttons in directory */
 .vertical-selector-card__container--lg {
     display: none;
+}
+
+/* Hide "Upcoming Streams" header specifically */
+header[aria-label="Upcoming Streams"] {
+    display: none !important;
+}
+
+/* Hide "Upcoming Streams" header by data target as backup */
+h2[data-a-target="upcoming-streams-header"] {
+    display: none !important;
+}
+
+/* Hide parent container of "Upcoming Streams" header */
+header[aria-label="Upcoming Streams"],
+header:has(h2[data-a-target="upcoming-streams-header"]) {
+    display: none !important;
+}
+
+/* Hide "show more" line separators on directory pages */
+.Layout-sc-1xcs6mc-0.show-more__hidden {
+    display: none !important;
+}
+
+/* More targeted approach for "Upcoming Streams" content grid:
+   Only hide when the header is present as a sibling element.
+   This prevents hiding legitimate channel grids on category pages.
+   Note: This may need adjustment based on Twitch's HTML structure.
+*/
+header[aria-label="Upcoming Streams"] + div,
+header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
+    display: none !important;
 }
 
 /* ==========================================
@@ -184,9 +221,12 @@ document.head.appendChild(style);
 - **Search icon** button
 - **Story borders** around profile pictures
 - **Follow/Unfollow buttons**
+- **Share buttons** on channel pages
 - **Subscriber and follower goals**
 - **Event banners** (sub & TC notifications)
 - **Category buttons** in directory (Games, IRL, Music, Creative)
+- **Upcoming Streams panels** (titles and content grids) - *primarily on /directory/following page*
+- **"Show more" line separators** on directory pages
 - **Bits and Cheer buttons**
 - **One-Tap Combos modal button**
 - **Chat header banner**
@@ -205,9 +245,13 @@ document.head.appendChild(style);
 Want to keep some elements? Simply comment out or remove the corresponding CSS rules:
 
 ```css
-/* To keep follow buttons, comment out this rule: */
+/* To keep follow and share buttons, comment out these rules: */
 /*
 .grllUE {
+    display: none !important;
+}
+
+button[data-a-target="share-button"] {
     display: none !important;
 }
 */
@@ -226,13 +270,27 @@ Want to keep some elements? Simply comment out or remove the corresponding CSS r
 }
 */
 
-/* To keep upcoming streams panels and show more separators, comment out this rule: */
+/* To keep upcoming streams panels and show more separators, comment out these rules: */
 /*
+header[aria-label="Upcoming Streams"] {
+    display: none !important;
+}
+
+h2[data-a-target="upcoming-streams-header"] {
+    display: none !important;
+}
+
 header[aria-label="Upcoming Streams"],
-div.Layout-sc-1xcs6mc-0.iqUbUe,
-div.Layout-sc-1xcs6mc-0.iHafKo,
-.Layout-sc-1xcs6mc-0.show-more__hidden
-{
+header:has(h2[data-a-target="upcoming-streams-header"]) {
+    display: none !important;
+}
+
+.Layout-sc-1xcs6mc-0.show-more__hidden {
+    display: none !important;
+}
+
+header[aria-label="Upcoming Streams"] + div,
+header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
 }
 */

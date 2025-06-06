@@ -317,7 +317,7 @@ button[aria-label="Cheer"] {
 ### 💡 Viewer Count Customization
 The CSS includes active styling for the viewer count display:
 - Centers viewer count and uptime elements
-- Hides viewer count (Stream Together) and clock icons
+- Hides viewer count Icon for Stream Together and clock icons
 - Standardizes font sizes for consistency
 
 To disable these features, comment out the relevant sections in the CSS file.

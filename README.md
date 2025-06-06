@@ -23,8 +23,8 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
    - **Firefox**: [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
    - **Safari**: [Cascadea](https://apps.apple.com/us/app/cascadea/id1432182561)
 
-2. **Option A**: Copy the CSS code from [twitch-clutter-removal.css](twitch-clutter-removal.css)
-3. **Option B**: Use the raw GitHub URL directly: `https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/twitch-clutter-removal.css`
+2. **Option A**: Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
+3. **Option B**: Use the raw GitHub URL directly: [Twitch Clutter Removal CSS Raw](https://raw.githubusercontent.com/ODRise/CleanTwitch/refs/heads/main/twitch_clutter_removal.css)
 4. Create a new style in your extension
 5. Set the domain to `twitch.tv`
 6. Paste the CSS code or URL and save

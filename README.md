@@ -23,21 +23,23 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
    - **Firefox**: [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
    - **Safari**: [Cascadea](https://apps.apple.com/us/app/cascadea/id1432182561)
 
-2. Copy the CSS code from below
-3. Create a new style in Stylus
-4. Set the domain to `twitch.tv`
-5. Paste the CSS code and save
+2. **Option A**: Copy the CSS code from [twitch-clutter-removal.css](twitch-clutter-removal.css)
+3. **Option B**: Use the raw GitHub URL directly: `https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/twitch-clutter-removal.css`
+4. Create a new style in your extension
+5. Set the domain to `twitch.tv`
+6. Paste the CSS code or URL and save
 
 ### Method 2: Browser Developer Tools (Temporary)
 
 1. Open Twitch.tv
 2. Press `F12` to open Developer Tools
 3. Go to **Console** tab
-4. Paste this code and press Enter:
+4. Copy the CSS from [twitch-clutter-removal.css](twitch-clutter-removal.css)
+5. Paste this code and press Enter:
 
 ```javascript
 const style = document.createElement('style');
-style.textContent = `/* CSS CODE HERE */`;
+style.textContent = `/* PASTE CSS HERE */`;
 document.head.appendChild(style);
 ```
 
@@ -45,8 +47,22 @@ document.head.appendChild(style);
 
 ## 📋 CSS Code
 
+### Quick Access
+- **📁 [Download CSS File](twitch-clutter-removal.css)** - Right-click and "Save as" to download
+- **🔗 [Raw CSS File](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/twitch-clutter-removal.css)** - Direct link for browser extensions
+
+### Installation Methods
+
+**For Stylus/Cascadea:**
+1. Copy the CSS from the file above, OR
+2. Use the raw GitHub URL directly in your extension
+
+**For Browser Dev Tools:**
+1. Copy the CSS from [twitch-clutter-removal.css](twitch-clutter-removal.css)
+2. Follow the Developer Tools method above
+
 <details>
-<summary>Click to expand the complete CSS code</summary>
+<summary>Click to expand the complete CSS code (same as the .css file)</summary>
 
 ```css
 /* ==========================================

@@ -295,7 +295,7 @@ button[aria-label="Cheer"] {
 - **Search icon** button
 - **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
-- **Follow/Unfollow buttons**
+- **Follow/Unfollow buttons** ⚠️ Note: Temporarily disable the CSS in Stylus to follow/unfollow streamers
 - **Share buttons** on channel pages
 - **Subscriber and follower goals**
 - **Event banners** (sub & TC notifications)

@@ -34,7 +34,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 1. Open Twitch.tv
 2. Press `F12` to open Developer Tools
 3. Go to **Console** tab
-4. Copy the CSS from [twitch-clutter-removal.css](twitch-clutter-removal.css)
+4. Copy the CSS from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
 5. Paste this code and press Enter:
 
 ```javascript
@@ -48,8 +48,8 @@ document.head.appendChild(style);
 ## 📋 CSS Code
 
 ### Quick Access
-- **📁 [Download CSS File](twitch-clutter-removal.css)** - Right-click and "Save as" to download
-- **🔗 [Raw CSS File](https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/twitch-clutter-removal.css)** - Direct link for browser extensions
+- **📁 [Download CSS File](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)** - Right-click and "Save as" to download
+- **🔗 [Raw CSS File](https://raw.githubusercontent.com/ODRise/CleanTwitch/refs/heads/main/twitch_clutter_removal.css)** - Direct link for browser extensions
 
 ### Installation Methods
 
@@ -58,7 +58,7 @@ document.head.appendChild(style);
 2. Use the raw GitHub URL directly in your extension
 
 **For Browser Dev Tools:**
-1. Copy the CSS from [twitch-clutter-removal.css](twitch-clutter-removal.css)
+1. Copy the CSS from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
 2. Follow the Developer Tools method above
 
 <details>

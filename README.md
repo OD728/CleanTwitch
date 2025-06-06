@@ -7,12 +7,13 @@ A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for 
 This CSS hides various clutter elements on Twitch.tv without breaking core functionality:
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
-- **Monetization**: Hides Bits, Cheer buttons, and One-Tap Combos modal
+- **Monetization**: Hides Get Bits, Cheer buttons, and One-Tap Combos modal
 - **Social Elements**: Removes follow buttons, share buttons, and subscriber goals
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat header banner and collapse button
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
-- **Visual Polish**: Makes info boxes transparent for cleaner look
+- **Visual Polish**: Makes info boxes transparent and removes search bar borders
+- **Viewer Count Styling** (Optional): Includes commented-out code to customize viewer count display
 
 ## 🚀 Installation
 
@@ -115,6 +116,13 @@ document.head.appendChild(style);
     display: none !important;
 }
 
+/* Hide search bar border */
+div[data-a-target="tray-search-input"],
+div[data-a-target="tray-search-input"] input {
+    border: none !important;
+    box-shadow: none !important;
+}
+
 /* ==========================================
    PROFILE & USER ELEMENTS
    ========================================== */
@@ -151,6 +159,56 @@ button[data-a-target="share-button"] {
 /* Make stream info box background transparent */
 .jlCrCH {
     background-color: transparent !important;
+}
+
+
+/* ==========================================
+   VIEWER COUNT ELEMENTS (COMMENTED OUT)
+   ========================================== */
+
+/* Center the meta tray container */
+.ffz--meta-tray {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Hide viewer count SVG icon */
+.ScSvgWrapper-sc-wkgzod-0.cqgFFC.tw-svg {
+    display: none !important;
+}
+
+/* Center the viewer count container */
+.ffz--native-viewers-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Center the live time container */
+.live-time {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Hide clock icon in uptime display */
+.ffz-i-clock {
+    display: none !important;
+}
+
+/* Match viewer count font to uptime display */
+p[data-a-target="animated-channel-viewers-count"] {
+    font-size: 1.3rem !important; /* matches tw-font-size-5 */
+    /*font-weight: 400 !important; /* matches tw-regular */
+    /*line-height: 1.5 !important;*/
+}
+
+/* Match uptime stat text font consistency */
+.ffz-stat-text {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
 }
 
 /* ==========================================
@@ -197,18 +255,18 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
    MONETIZATION ELEMENTS
    ========================================== */
 
-/* Hide Bits button */
-.kBEymU.Layout-sc-1xcs6mc-0 > .GOdqv.ScCoreButton-sc-ocjdkq-0 {
+/* Hide Get Bits button */
+button[data-a-target="top-nav-get-bits-button"] {
+    display: none !important;
+}
+   
+/* Hide One-Tap Combos modal button */
+.oneTapIngressButton--inGsR {
     display: none !important;
 }
 
 /* Hide Cheer button */
-.gkrCJN.Layout-sc-1xcs6mc-0 > .eSFFfM.ScButtonIcon-sc-9yap0r-0.kIbAir.ScCoreButton-sc-ocjdkq-0 {
-    display: none !important;
-}
-
-/* Hide One-Tap Combos modal button */
-.oneTapIngressButton--inGsR {
+button[aria-label="Cheer"] {
     display: none !important;
 }
 
@@ -235,6 +293,7 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
 - **Stories sections** in navigation and sidebar
 - **"Following" text** on following page
 - **Search icon** button
+- **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
 - **Follow/Unfollow buttons**
 - **Share buttons** on channel pages
@@ -243,17 +302,26 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
 - **Category buttons** in directory (Games, IRL, Music, Creative)
 - **Upcoming Streams panels** (titles and content grids) - *primarily on /directory/following page*
 - **"Show more" line separators** on directory pages
-- **Bits and Cheer buttons**
+- **Get Bits button**
+- **Cheer button**
 - **One-Tap Combos modal button**
 - **Chat header banner**
 - **Chat collapse button**
+
+### 💡 Optional Viewer Count Customization
+The CSS includes commented-out code for customizing the viewer count display:
+- Centers viewer count and uptime elements
+- Hides viewer count and clock icons
+- Standardizes font sizes for consistency
+
+To enable these features, uncomment the relevant sections in the CSS file.
 
 ### ✅ What Stays Functional
 - **Chat messages** and chat input
 - **Video player** and controls
 - **Stream information** and titles
 - **Navigation** to channels and categories
-- **Search functionality** (just the icon is hidden)
+- **Search functionality** (just the icon and borders are hidden)
 - **All core Twitch features**
 
 ## 🛠️ Customization
@@ -390,15 +458,24 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 
 ## 📋 Changelog
 
-### Latest Updates
+### Latest Updates (2025)
+- **Improved**: Updated monetization button selectors to use semantic attributes (more stable)
+  - Changed Bits button selector to `button[data-a-target="top-nav-get-bits-button"]`
+  - Changed Cheer button selector to `button[aria-label="Cheer"]`
+- **Added**: Hide search bar borders for cleaner appearance
+- **Added**: Optional viewer count customization section (commented out by default)
+  - Centers viewer count and uptime display
+  - Hides viewer count SVG and clock icons
+  - Standardizes font sizes for consistency
+- **Enhanced**: Code organization and documentation
+
+### Previous Features
 - **Added**: Hide One-Tap Combos modal button (`.oneTapIngressButton--inGsR`)
 - **Added**: Hide share button on channel pages (`button[data-a-target="share-button"]`)
 - **Fixed**: Improved "Upcoming Streams" targeting to prevent hiding legitimate channel listings on category pages
 - **Enhanced**: More comprehensive "Upcoming Streams" header removal with multiple selectors
-
-### Previous Features
 - Hide Stories sections and navigation elements
-- Remove monetization buttons (Bits, Cheer)
+- Remove monetization buttons
 - Clean up directory and profile elements
 - Minimize chat distractions
 - Hide "show more" separators

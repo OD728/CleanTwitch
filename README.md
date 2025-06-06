@@ -295,7 +295,7 @@ button[aria-label="Cheer"] {
 - **Search icon** button
 - **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
-- **Follow/Unfollow buttons** ⚠️ Note: Temporarily disable the CSS in Stylus to follow/unfollow streamers
+- **Follow/Unfollow buttons** ⚠️ *Note: Temporarily disable the CSS in Stylus to follow/unfollow streamers*
 - **Share buttons** on channel pages
 - **Subscriber and follower goals**
 - **Event banners** (sub & TC notifications)
@@ -317,7 +317,7 @@ button[aria-label="Cheer"] {
 ### 💡 Viewer Count Customization
 The CSS includes active styling for the viewer count display:
 - Centers viewer count and uptime elements
-- Hides viewer count Icon for Stream Together and clock icons
+- Hides viewer count and clock icons
 - Standardizes font sizes for consistency
 
 To disable these features, comment out the relevant sections in the CSS file.
@@ -332,6 +332,16 @@ To disable these features, comment out the relevant sections in the CSS file.
 - **All core Twitch features**
 
 ## 🛠️ Customization
+
+### ⚠️ Important Usage Tips
+
+Since this CSS hides follow/unfollow buttons, you'll need to **temporarily disable the CSS in Stylus** when you want to:
+- Follow or unfollow a streamer
+- Use the share button on channel pages
+
+Simply toggle the style off in your extension, perform the action, then re-enable it.
+
+### Keeping Specific Elements
 
 Want to keep some elements? Simply comment out or remove the corresponding CSS rules:
 
@@ -511,7 +521,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - **Added**: Hide search bar borders for cleaner appearance
 - **Added**: Viewer count customization (enabled by default)
   - Centers viewer count and uptime display
-  - Hides viewer count Icon for Stream Together and clock icons (FFZ)
+  - Hides viewer count SVG and clock icons
   - Standardizes font sizes for consistency
 - **Enhanced**: Code organization and documentation
 

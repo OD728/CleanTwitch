@@ -48,6 +48,13 @@
     display: none !important;
 }
 
+/* Hide search bar border */
+div[data-a-target="tray-search-input"],
+div[data-a-target="tray-search-input"] input {
+    border: none !important;
+    box-shadow: none !important;
+}
+
 /* ==========================================
    PROFILE & USER ELEMENTS
    ========================================== */
@@ -84,6 +91,56 @@ button[data-a-target="share-button"] {
 /* Make stream info box background transparent */
 .jlCrCH {
     background-color: transparent !important;
+}
+
+
+/* ==========================================
+   VIEWER COUNT ELEMENTS (COMMENTED OUT)
+   ========================================== */
+
+/* Center the meta tray container */
+.ffz--meta-tray {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Hide viewer count SVG icon */
+.ScSvgWrapper-sc-wkgzod-0.cqgFFC.tw-svg {
+    display: none !important;
+}
+
+/* Center the viewer count container */
+.ffz--native-viewers-container {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Center the live time container */
+.live-time {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+/* Hide clock icon in uptime display */
+.ffz-i-clock {
+    display: none !important;
+}
+
+/* Match viewer count font to uptime display */
+p[data-a-target="animated-channel-viewers-count"] {
+    font-size: 1.3rem !important; /* matches tw-font-size-5 */
+    /*font-weight: 400 !important; /* matches tw-regular */
+    /*line-height: 1.5 !important;*/
+}
+
+/* Match uptime stat text font consistency */
+.ffz-stat-text {
+    font-size: 1.3rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
 }
 
 /* ==========================================
@@ -130,18 +187,18 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
    MONETIZATION ELEMENTS
    ========================================== */
 
-/* Hide Bits button */
-.kBEymU.Layout-sc-1xcs6mc-0 > .GOdqv.ScCoreButton-sc-ocjdkq-0 {
+/* Hide Get Bits button */
+button[data-a-target="top-nav-get-bits-button"] {
+    display: none !important;
+}
+   
+/* Hide One-Tap Combos modal button */
+.oneTapIngressButton--inGsR {
     display: none !important;
 }
 
 /* Hide Cheer button */
-.gkrCJN.Layout-sc-1xcs6mc-0 > .eSFFfM.ScButtonIcon-sc-9yap0r-0.kIbAir.ScCoreButton-sc-ocjdkq-0 {
-    display: none !important;
-}
-
-/* Hide One-Tap Combos modal button */
-.oneTapIngressButton--inGsR {
+button[aria-label="Cheer"] {
     display: none !important;
 }
 

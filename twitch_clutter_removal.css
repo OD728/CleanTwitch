@@ -95,7 +95,7 @@ button[data-a-target="share-button"] {
 
 
 /* ==========================================
-   VIEWER COUNT ELEMENTS (COMMENTED OUT)
+   VIEWER COUNT ELEMENTS
    ========================================== */
 
 /* Center the meta tray container */
@@ -105,8 +105,8 @@ button[data-a-target="share-button"] {
     align-items: center !important;
 }
 
-/* Hide viewer count SVG icon */
-.ScSvgWrapper-sc-wkgzod-0.cqgFFC.tw-svg {
+/* Hide viewer count SVG icon (Normal and Stream Together) */
+.ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg {
     display: none !important;
 }
 

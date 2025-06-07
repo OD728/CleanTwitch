@@ -80,7 +80,7 @@ document.head.appendChild(style);
 - **Cheer button**
 - **One-Tap Combos modal button**
 - **Chat collapse button**
-- **Viewer count SVG icon**
+- **Viewer count SVG icon (Stream Together)**
 - **Clock icon** in uptime display
 - **Leaderboard sections** (commented out by default)
 
@@ -303,8 +303,8 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
-- **Removed**: Chat top banner/header hiding (was causing layout issues)
-- **Removed**: Banner for sub & TC events hiding (`.fSpCrC` rule)
+- **Removed**: Chat top banner/header hiding
+- **Removed**: Banner for sub & TC events hiding
 - **Streamlined**: Goals hiding to use more specific selector (`.Layout-sc-1xcs6mc-0.iSXDpX`)
 - **Enhanced**: About section panel transparency with specific selector (`.Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content`)
 - **Added**: Leaderboard hiding (commented out by default for optional use)

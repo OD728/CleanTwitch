@@ -10,6 +10,7 @@
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
    - Minimizes chat distractions
+   - Hides upcoming streams panels and show more separators
    - Makes info boxes transparent
    
    ========================================== */
@@ -105,8 +106,14 @@ button[data-a-target="share-button"] {
     align-items: center !important;
 }
 
+
 /* Hide viewer count SVG icon (Normal and Stream Together) */
 .ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg {
+    display: none !important;
+}
+
+/* Hide viewer count SVG wrapper container */
+div[role="presentation"].cbxBks {
     display: none !important;
 }
 
@@ -115,6 +122,14 @@ button[data-a-target="share-button"] {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+}
+
+/* Center viewer count elements */
+.kvrzxX {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
 }
 
 /* Center the live time container */
@@ -126,6 +141,42 @@ button[data-a-target="share-button"] {
 
 /* Hide clock icon in uptime display */
 .ffz-i-clock {
+    display: none !important;
+}
+
+/* Hide gauge icon in player stats */
+.ffz-i-gauge {
+    display: none !important;
+}
+
+/* Style the animated viewer count to match FFZ stats */
+strong[data-a-target="animated-channel-viewers-count"] {
+    font-size: var(--font-size-6) !important; /* 1.3rem */
+    font-weight: var(--font-weight-normal) !important; /* 400 */
+    line-height: var(--line-height-body) !important; /* 1.5 */
+}
+
+/* Style the animated number span inside viewer count */
+strong[data-a-target="animated-channel-viewers-count"] span {
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+/* Hide the redundant viewer count description */
+.kvrzxX > p.CoreText-sc-1txzju1-0 {
+    display: none !important;
+}
+
+/* Style native uptime display to match FFZ stats */
+.live-time > span[aria-hidden="true"] {
+    font-size: var(--font-size-6) !important; /* 1.3rem */
+    font-weight: var(--font-weight-normal) !important; /* 400 */
+    line-height: var(--line-height-body) !important; /* 1.5 */
+}
+
+/* Hide the redundant uptime description */
+.live-time > p.CoreText-sc-1txzju1-0 {
     display: none !important;
 }
 

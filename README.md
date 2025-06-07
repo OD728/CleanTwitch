@@ -10,7 +10,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 - **Monetization**: Hides Get Bits, Cheer buttons, and One-Tap Combos modal
 - **Social Elements**: Removes follow buttons, share buttons, and subscriber goals
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
-- **Chat Cleanup**: Removes chat collapse button
+- **Chat Cleanup**: Removes chat collapse button (Leaderboard as well but it's default off)
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
 - **Visual Polish**: Makes info boxes transparent and removes search bar borders
 - **Viewer Count Styling**: Includes customization for viewer count display
@@ -67,10 +67,10 @@ document.head.appendChild(style);
 ### ✅ Removed Elements
 - **"Following" text header** on following page
 - **Stories sections** in main area and sidebar
+- **"Open Stories" button** in sidebar
 - **Search icon** button
 - **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
-
 - **Share buttons** on channel pages
 - **Subscriber and follower goals** (channel page goals section)
 - **Category buttons** in directory (Games, IRL, Music, Creative)
@@ -80,7 +80,7 @@ document.head.appendChild(style);
 - **Cheer button**
 - **One-Tap Combos modal button**
 - **Chat collapse button**
-- **Viewer count SVG icon (Stream Together)**
+- **Viewer count SVG icon for Stream Together**
 - **Clock icon** in uptime display
 - **Leaderboard sections** (commented out by default)
 
@@ -303,8 +303,9 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Added**: Hide "Open Stories" button and container in sidebar
 - **Removed**: Chat top banner/header hiding
-- **Removed**: Banner for sub & TC events hiding
+- **Removed**: Banner for sub & TC events hiding (`.fSpCrC` rule)
 - **Streamlined**: Goals hiding to use more specific selector (`.Layout-sc-1xcs6mc-0.iSXDpX`)
 - **Enhanced**: About section panel transparency with specific selector (`.Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content`)
 - **Added**: Leaderboard hiding (commented out by default for optional use)
@@ -316,7 +317,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - **Added**: About section panel background transparency
 - **Added**: Viewer count customization (enabled by default)
   - Centers viewer count and uptime display
-  - Hides viewer count SVG icon and clock icon from FFZ
+  - Hides viewer count SVG icon (Stream Together) and clock icon from FFZ
   - Standardizes font sizes for consistency
 - **Enhanced**: Monetization button selectors for better stability
 - **Added**: Search bar border removal for cleaner appearance

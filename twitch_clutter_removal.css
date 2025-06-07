@@ -10,7 +10,6 @@
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
    - Minimizes chat distractions
-   - Hides upcoming streams panels and show more separators
    - Makes info boxes transparent
    
    ========================================== */
@@ -34,10 +33,16 @@
     display: none !important;
 }
 
+/* Hide "Open Stories" button container */
+.Layout-sc-1xcs6mc-0.iGMbNn[style*="margin-top: 0.7rem"] {
+    display: none !important;
+}
+
 /* Hide sidebar stories section (additional selector) */
 .Layout-sc-1xcs6mc-0.iGMbNn.storiesLeftNavSection--csO9S {
     display: none !important;
 }
+
 
 /* ==========================================
    SEARCH & INPUT ELEMENTS
@@ -202,7 +207,7 @@ button[aria-label="Cheer"] {
    ========================================== */
 
 /* Hide leaderboard section (uncomment to enable) */
-/*
+
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }
@@ -220,7 +225,6 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }
-*/
 
 /* Hide chat collapse button */
 .toggle-visibility__right-column--expanded {

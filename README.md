@@ -13,7 +13,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 - **Chat Cleanup**: Removes chat collapse button (Leaderboard as well but it's default off)
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
 - **Visual Polish**: Makes info boxes transparent and removes search bar borders
-- **Viewer Count Styling**: Includes customization for viewer count display
+- **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics
 
 ## 🚀 Installation
 
@@ -81,18 +81,42 @@ document.head.appendChild(style);
 - **One-Tap Combos modal button**
 - **Chat collapse button**
 - **Viewer count SVG icon for Stream Together**
-- **Clock icon** in uptime display
+- **Clock icon** in uptime display (FFZ)
+- **Gauge icon** in player stats (FFZ)
 - **Leaderboard sections** (commented out by default)
 
 ### 💡 Modified Elements
 - **Viewer count and uptime display** - Centered and standardized font sizes
 - **About section panels** - Made transparent background
+- **Native Twitch viewer count** - Unified styling with FFZ stats
+- **Stream statistics** - Clean, icon-free display
 
 ### 💡 Viewer Count Customization
 The CSS includes active styling for the viewer count display:
 - Centers viewer count and uptime elements
 - Hides viewer count SVG icon and clock icon from FFZ
 - Standardizes font sizes for consistency
+
+### 🎨 Viewer Count Elements
+
+The CSS includes comprehensive styling for stream metadata displays:
+
+#### Native Twitch Elements
+- **Viewer count** - Removes people icon (Stream Together) and "XXX viewers" text, shows only the number
+- **Stream uptime** - Removes descriptive text, shows only the time
+- **Unified font styling** - Consistent 1.3rem size, 400 weight across all stats
+
+#### FrankerFaceZ (FFZ) Elements
+⚠️ **Important**: Some viewer count CSS rules only work with specific FFZ settings enabled:
+
+**Required FFZ Settings** (Channel → Metadata):
+- ✅ **Enable Player Statistics** - Required for player stats display
+- ✅ **Enable Hide Twitch's Native Stream Uptime** - Required for FFZ uptime display
+
+**What gets styled with FFZ**:
+- **FFZ uptime** - Clock icon removed, clean time display
+- **FFZ player stats** - Gauge icon removed, shows only latency value
+- **Centered metadata tray** - All stats aligned and centered
 
 ### ✅ What Stays Functional
 - **Chat messages** and chat input
@@ -303,6 +327,17 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Enhanced**: Complete viewer count elements styling
+  - Native Twitch viewer count now matches FFZ stat styling
+  - Removes viewer count icon and descriptive "XXX viewers" text
+  - Removes uptime descriptive text ("XXX since live stream started")
+  - Added gauge icon removal for FFZ player stats
+  - Unified font styling across all stream statistics (1.3rem, 400 weight)
+- **Added**: CSS variable usage for better theme compatibility
+- **Improved**: More specific selectors for native Twitch elements
+- **Added**: FFZ settings requirements documentation
+
+### Previous Updates
 - **Added**: Hide "Open Stories" button and container in sidebar
 - **Removed**: Chat top banner/header hiding
 - **Removed**: Banner for sub & TC events hiding (`.fSpCrC` rule)
@@ -311,7 +346,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - **Added**: Leaderboard hiding (commented out by default for optional use)
 - **Improved**: Code organization and cleanup for better maintainability
 
-### Previous Updates
+### Earlier Updates
 - **Added**: Hide "Following" title header with multiple selectors
 - **Added**: Hide Stories sections in main area and sidebar  
 - **Added**: About section panel background transparency
@@ -322,7 +357,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - **Enhanced**: Monetization button selectors for better stability
 - **Added**: Search bar border removal for cleaner appearance
 
-### Earlier Features
+### Initial Features
 - **Added**: Hide One-Tap Combos modal button
 - **Added**: Hide share button on channel pages
 - **Fixed**: Improved "Upcoming Streams" targeting to prevent hiding legitimate channel listings

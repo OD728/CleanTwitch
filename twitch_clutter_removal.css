@@ -19,8 +19,13 @@
    STORIES & NAVIGATION
    ========================================== */
 
+/* Hide "Following" title header (updated selectors) */
+.evhWqB h1.kYYPPM.lbYztg {
+    display: none !important;
+}
+
 /* Hide stories following/sidebar page */
-.lcFJxY {
+.Layout-sc-1xcs6mc-0.dKitkM {
     display: none !important;
 }
 
@@ -29,14 +34,9 @@
     display: none !important;
 }
 
-/* Hide additional story elements */
-.hdoiLi {
+/* Hide sidebar stories section (additional selector) */
+.Layout-sc-1xcs6mc-0.iGMbNn.storiesLeftNavSection--csO9S {
     display: none !important;
-}
-
-/* Hide "FOLLOWING" text header on following page */
-.kcPfws {
-    display: none;
 }
 
 /* ==========================================
@@ -79,17 +79,12 @@ button[data-a-target="share-button"] {
    ========================================== */
 
 /* Hide subscription and follower goals below stream */
-.ldUFHV {
+.Layout-sc-1xcs6mc-0.iSXDpX {
     display: none !important;
 }
 
-/* Hide banner for sub & TC events */
-.fSpCrC {
-    display: none !important;
-}
-
-/* Make stream info box background transparent */
-.jlCrCH {
+/* Make about section panel background transparent */
+.Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content {
     background-color: transparent !important;
 }
 
@@ -206,10 +201,26 @@ button[aria-label="Cheer"] {
    CHAT ELEMENTS
    ========================================== */
 
-/* Hide chat top banner/header */
-.stream-chat-header.fiHaCw.Layout-sc-1xcs6mc-0 {
+/* Hide leaderboard section (uncomment to enable) */
+/*
+.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }
+
+.channel-leaderboard-header-rotating__users {
+    display: none !important;
+}
+
+button[aria-label="Previous leaderboard set"],
+button[aria-label="Next leaderboard set"] {
+    display: none !important;
+}
+
+.channel-leaderboard-header-first-entry,
+.channel-leaderboard-header-runner-up-entry {
+    display: none !important;
+}
+*/
 
 /* Hide chat collapse button */
 .toggle-visibility__right-column--expanded {

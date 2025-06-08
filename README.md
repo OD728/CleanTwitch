@@ -300,6 +300,7 @@ Want to further enhance your Twitch experience? Here are some recommended additi
 
 ### 🌙 Theming
 - **[Catppuccin for Twitch](https://github.com/catppuccin/userstyles/tree/main/styles/twitch)** - Beautiful, soothing pastel theme that works great with this clutter removal CSS
+- **[Twitch Title Truncator](https://github.com/ODRise/STwitchT)** - A lightweight userscript that automatically truncates long Twitch stream titles and displays the full title on hover.
 
 ### 🔧 Browser Extensions
 - **[FrankerFaceZ](https://github.com/FrankerFaceZ/FrankerFaceZ)** - Comprehensive Twitch enhancement extension with extensive customization options
@@ -322,6 +323,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Added**: Twitch Title Truncator
 - **Added**: Promotional content banner below player
 - **Fixed**: Sidebar username display issue
   - Made viewer count selectors more specific to prevent hiding usernames in left sidebar

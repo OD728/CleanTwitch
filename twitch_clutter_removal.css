@@ -16,13 +16,22 @@
    ========================================== */
 
 /* ==========================================
-   STORIES & NAVIGATION
+   PAGE HEADERS & TITLES
    ========================================== */
 
-/* Hide "Following" title header (updated selectors) */
+/* Hide "Following" title header */
 .evhWqB h1.kYYPPM.lbYztg {
     display: none !important;
 }
+
+/* Hide "Browse" title header */
+.kzgEsT h1.kYYPPM.lbYztg {
+    display: none !important;
+}
+
+/* ==========================================
+   STORIES & NAVIGATION
+   ========================================== */
 
 /* Hide stories following/sidebar page */
 .Layout-sc-1xcs6mc-0.dKitkM {
@@ -44,6 +53,10 @@
     display: none !important;
 }
 
+/* Hide story border around profile pictures */
+.halo--FRPlG {
+    background: transparent !important;
+}
 
 /* ==========================================
    SEARCH & INPUT ELEMENTS
@@ -64,11 +77,6 @@ div[data-a-target="tray-search-input"] input {
 /* ==========================================
    PROFILE & USER ELEMENTS
    ========================================== */
-
-/* Hide story border around profile pictures */
-.halo--FRPlG {
-    background: transparent !important;
-}
 
 /* Hide follow/unfollow buttons */
 .grllUE {
@@ -94,7 +102,6 @@ button[data-a-target="share-button"] {
     background-color: transparent !important;
 }
 
-
 /* ==========================================
    VIEWER COUNT ELEMENTS
    ========================================== */
@@ -105,7 +112,6 @@ button[data-a-target="share-button"] {
     justify-content: center !important;
     align-items: center !important;
 }
-
 
 /* Hide viewer count SVG icon (Normal and Stream Together) */
 .ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg {
@@ -124,8 +130,9 @@ div[role="presentation"].cbxBks {
     align-items: center !important;
 }
 
-/* Center viewer count elements */
-.kvrzxX {
+/* Center viewer count elements - more specific selector to avoid sidebar conflicts */
+.video-player__container .kvrzxX,
+.channel-root__info .kvrzxX {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
@@ -163,8 +170,9 @@ strong[data-a-target="animated-channel-viewers-count"] span {
     line-height: inherit !important;
 }
 
-/* Hide the redundant viewer count description */
-.kvrzxX > p.CoreText-sc-1txzju1-0 {
+/* Hide the redundant viewer count description - more specific selector */
+.video-player__container .kvrzxX > p.CoreText-sc-1txzju1-0,
+.channel-root__info .kvrzxX > p.CoreText-sc-1txzju1-0 {
     display: none !important;
 }
 
@@ -182,9 +190,7 @@ strong[data-a-target="animated-channel-viewers-count"] span {
 
 /* Match viewer count font to uptime display */
 p[data-a-target="animated-channel-viewers-count"] {
-    font-size: 1.3rem !important; /* matches tw-font-size-5 */
-    /*font-weight: 400 !important; /* matches tw-regular */
-    /*line-height: 1.5 !important;*/
+    font-size: 1.3rem !important;
 }
 
 /* Match uptime stat text font consistency */
@@ -224,11 +230,7 @@ header:has(h2[data-a-target="upcoming-streams-header"]) {
     display: none !important;
 }
 
-/* More targeted approach for "Upcoming Streams" content grid:
-   Only hide when the header is present as a sibling element.
-   This prevents hiding legitimate channel grids on category pages.
-   Note: This may need adjustment based on Twitch's HTML structure.
-*/
+/* Hide "Upcoming Streams" content grid */
 header[aria-label="Upcoming Streams"] + div,
 header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
@@ -257,8 +259,17 @@ button[aria-label="Cheer"] {
    CHAT ELEMENTS
    ========================================== */
 
-/* Hide leaderboard section (uncomment to enable) */
+/* Hide chat collapse button */
+.toggle-visibility__right-column--expanded {
+    display: none !important;
+}
 
+/* ==========================================
+   LEADERBOARD ELEMENTS (OPTIONAL)
+   ========================================== */
+
+/* Hide leaderboard section - Uncomment block below to enable */
+/*
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }
@@ -276,8 +287,4 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }
-
-/* Hide chat collapse button */
-.toggle-visibility__right-column--expanded {
-    display: none !important;
-}
+*/

@@ -322,6 +322,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Added**: Promotional content banner below player
 - **Fixed**: Sidebar username display issue
   - Made viewer count selectors more specific to prevent hiding usernames in left sidebar
   - Added parent container selectors to target only video player and channel info areas

@@ -66,6 +66,7 @@ document.head.appendChild(style);
 
 ### ✅ Removed Elements
 - **"Following" text header** on following page
+- **"Browse" text header** on browse/directory pages
 - **Stories sections** in main area and sidebar
 - **"Open Stories" button** in sidebar
 - **Search icon** button
@@ -80,7 +81,7 @@ document.head.appendChild(style);
 - **Cheer button**
 - **One-Tap Combos modal button**
 - **Chat collapse button**
-- **Viewer count SVG icon for Stream Together**
+- **Viewer count SVG icon for Stream Together and normal Stream**
 - **Clock icon** in uptime display (FFZ)
 - **Gauge icon** in player stats (FFZ)
 - **Leaderboard sections** (commented out by default)
@@ -91,18 +92,12 @@ document.head.appendChild(style);
 - **Native Twitch viewer count** - Unified styling with FFZ stats
 - **Stream statistics** - Clean, icon-free display
 
-### 💡 Viewer Count Customization
-The CSS includes active styling for the viewer count display:
-- Centers viewer count and uptime elements
-- Hides viewer count SVG icon and clock icon from FFZ
-- Standardizes font sizes for consistency
-
 ### 🎨 Viewer Count Elements
 
 The CSS includes comprehensive styling for stream metadata displays:
 
 #### Native Twitch Elements
-- **Viewer count** - Removes people icon (Stream Together) and "XXX viewers" text, shows only the number
+- **Viewer count** - Removes people icon (Normal and Stream Together) and "XXX viewers" text, shows only the number
 - **Stream uptime** - Removes descriptive text, shows only the time
 - **Unified font styling** - Consistent 1.3rem size, 400 weight across all stats
 
@@ -327,6 +322,15 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Fixed**: Sidebar username display issue
+  - Made viewer count selectors more specific to prevent hiding usernames in left sidebar
+  - Added parent container selectors to target only video player and channel info areas
+- **Added**: Hide "Browse" header on directory pages
+  - New rule to remove the large "Browse" text at the top of browse/directory pages
+- **Improved**: CSS organization and structure
+  - Created new "Page Headers & Titles" section
+  - Reorganized all CSS rules into logical sections for better maintainability
+  - Properly formatted optional leaderboard rules as a commented block
 - **Enhanced**: Complete viewer count elements styling
   - Native Twitch viewer count now matches FFZ stat styling
   - Removes viewer count icon and descriptive "XXX viewers" text

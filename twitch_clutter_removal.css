@@ -250,17 +250,17 @@ button[data-a-target="top-nav-get-bits-button"] {
     display: none !important;
 }
 
-/* Hide Cheer button */
-button[aria-label="Cheer"] {
-    display: none !important;
-}
-
 /* ==========================================
    CHAT ELEMENTS
    ========================================== */
 
 /* Hide chat collapse button */
 .toggle-visibility__right-column--expanded {
+    display: none !important;
+}
+
+/* Hide Cheer button */
+button[aria-label="Cheer"] {
     display: none !important;
 }
 

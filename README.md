@@ -14,6 +14,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
 - **Visual Polish**: Makes info boxes transparent and removes search bar borders
 - **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics
+- **Tag Management**: Optional feature to limit displayed tags (disabled by default)
 
 ## 🚀 Installation
 
@@ -85,6 +86,7 @@ document.head.appendChild(style);
 - **Clock icon** in uptime display (FFZ)
 - **Gauge icon** in player stats (FFZ)
 - **Leaderboard sections** (commented out by default)
+- **Extra tags beyond first 3** (commented out by default)
 
 ### 💡 Modified Elements
 - **Viewer count and uptime display** - Centered and standardized font sizes
@@ -127,6 +129,23 @@ The CSS includes comprehensive styling for stream metadata displays:
 ### Optional Features
 
 The CSS includes some features that are commented out by default:
+
+#### Tag Limiting
+To hide extra tags beyond the first 3, uncomment this section in the CSS:
+
+```css
+/* Hide extra tags beyond first 3 - Uncomment block below to enable */
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
+    display: none !important;
+}
+```
+
+This will:
+- Show only the first 3 tags on channel pages
+- Permanently hide any additional tags
+- Clean up cluttered tag displays on popular streamers' channels
+
 
 #### Leaderboard Hiding
 To hide leaderboard sections (sub gift rankings), uncomment this section in the CSS:
@@ -241,6 +260,14 @@ p[data-a-target="animated-channel-viewers-count"] {
     line-height: 1.5 !important;
 }
 */
+
+/* To keep all tags visible, comment out this rule: */
+/*
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
+    display: none !important;
+}
+*/
 ```
 
 ## 🖥️ Browser Compatibility
@@ -323,6 +350,11 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+
+- **Added**: Tag limiting feature (disabled by default)
+  - Option to hide extra tags beyond the first 3 on channel pages
+  - Permanently removes cluttered tag displays
+  - Disabled by default to preserve user choice
 - **Added**: Twitch Title Truncator
 - **Added**: Promotional content banner below player
 - **Fixed**: Sidebar username display issue

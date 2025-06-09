@@ -30,6 +30,11 @@
     display: none !important;
 }
 
+/* Hide Menu (3 Dots) button in navbar */
+button[data-a-target="ellipsis-button"] {
+    display: none !important;
+}
+
 /* ==========================================
    STORIES & NAVIGATION
    ========================================== */

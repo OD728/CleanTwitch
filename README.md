@@ -8,7 +8,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
 - **Monetization**: Hides Get Bits, Cheer buttons, and One-Tap Combos modal
-- **Social Elements**: Removes follow/unfollow buttons, share buttons, and subscriber goals
+- **Social Elements**: Removes share buttons, and subscriber goals
 - **Profile Elements**: Hides "About [Username]" headers and titles
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat collapse button (Leaderboard as well but it's default off)

@@ -74,7 +74,6 @@ document.head.appendChild(style);
 - **Search icon** button
 - **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
-- **Follow/unfollow buttons** on channel pages
 - **Share buttons** on channel pages
 - **"About [Username]" headers** and titles on channel pages
 - **Subscriber and follower goals** (channel page goals section)

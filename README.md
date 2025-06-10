@@ -8,7 +8,8 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
 - **Monetization**: Hides Get Bits, Cheer buttons, and One-Tap Combos modal
-- **Social Elements**: Removes follow buttons, share buttons, and subscriber goals
+- **Social Elements**: Removes follow/unfollow buttons, share buttons, and subscriber goals
+- **Profile Elements**: Hides "About [Username]" headers and titles
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat collapse button (Leaderboard as well but it's default off)
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
@@ -73,7 +74,9 @@ document.head.appendChild(style);
 - **Search icon** button
 - **Search bar borders** for cleaner appearance
 - **Story borders** around profile pictures
+- **Follow/unfollow buttons** on channel pages
 - **Share buttons** on channel pages
+- **"About [Username]" headers** and titles on channel pages
 - **Subscriber and follower goals** (channel page goals section)
 - **Category buttons** in directory (Games, IRL, Music, Creative)
 - **Upcoming Streams panels** (titles and content grids)
@@ -118,7 +121,7 @@ The CSS includes comprehensive styling for stream metadata displays:
 ### ✅ What Stays Functional
 - **Chat messages** and chat input
 - **Video player** and controls
-- **Stream information** and titles
+- **Stream information** and titles (except "About [Username]" headers)
 - **Viewer count and uptime** (styled for cleaner appearance)
 - **Navigation** to channels and categories
 - **Search functionality** (just the icon and borders are hidden)
@@ -176,9 +179,27 @@ button[aria-label="Next leaderboard set"] {
 Want to keep some elements? Simply comment out or remove the corresponding CSS rules:
 
 ```css
+/* To keep follow/unfollow buttons, comment out this rule: */
+/*
+.grllUE {
+    display: none !important;
+}
+*/
+
 /* To keep share buttons, comment out this rule: */
 /*
 button[data-a-target="share-button"] {
+    display: none !important;
+}
+*/
+
+/* To keep "About [Username]" headers, comment out these rules: */
+/*
+.Layout-sc-1xcs6mc-0.hOA-Dtm {
+    display: none !important;
+}
+
+h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
     display: none !important;
 }
 */
@@ -351,6 +372,16 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 
 ### Latest Updates (2025)
 
+- **Added**: "About [Username]" header hiding
+  - Hides "About [Username]" section headers on channel pages
+  - Includes both main container and alternative title selectors
+  - Keeps about section content visible while removing headers
+- **Added**: Follow/unfollow button hiding
+  - Removes follow and unfollow buttons from channel pages
+  - Cleans up social interaction elements for distraction-free viewing
+- **Improved**: CSS organization and structure
+  - Reorganized Profile & User Elements section
+  - Added proper comments for all new features
 - **Added**: Tag limiting feature (disabled by default)
   - Option to hide extra tags beyond the first 3 on channel pages
   - Permanently removes cluttered tag displays

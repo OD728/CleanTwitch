@@ -5,14 +5,19 @@
    This CSS removes distracting UI elements from Twitch.tv
    for a cleaner, more focused viewing experience.
    
+   Works best with FrankerFaceZ (FFZ) extension for enhanced viewer
+   count styling, but functions perfectly without it as well.
+   
    Features:
-   - Hides Stories sections and navigation
+   - Hides Stories sections and navigation clutter
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
-   - Minimizes chat distractions
-   - Hides upcoming streams panels and show more separators
-   - Makes info boxes transparent
-   - Optional tag limiting (disabled by default)
+   - Hides "About [Username]" headers and follow/unfollow buttons
+   - Minimizes chat distractions and UI elements
+   - Hides upcoming streams panels and "show more" separators
+   - Enhances viewer count and stream statistics display
+   - Makes info boxes transparent for cleaner appearance
+   - Optional features: tag limiting and leaderboard hiding (disabled by default)
    
    ========================================== */
 
@@ -27,11 +32,6 @@
 
 /* Hide "Browse" title header */
 .kzgEsT h1.kYYPPM.lbYztg {
-    display: none !important;
-}
-
-/* Hide Menu (3 Dots) button in navbar */
-button[data-a-target="ellipsis-button"] {
     display: none !important;
 }
 
@@ -106,6 +106,16 @@ button[data-a-target="share-button"] {
 /* Make about section panel background transparent */
 .Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content {
     background-color: transparent !important;
+}
+
+/* Hide "About [Username]" header section */
+.Layout-sc-1xcs6mc-0.hOA-Dtm {
+    display: none !important;
+}
+
+/* Alternative selector for About section title */
+h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
+    display: none !important;
 }
 
 /* ==========================================
@@ -206,17 +216,6 @@ p[data-a-target="animated-channel-viewers-count"] {
     line-height: 1.5 !important;
 }
 
-/* ==========================================
-   TAG ELEMENTS (OPTIONAL)
-   ========================================== */
-
-/* Hide extra tags beyond first 3 - Uncomment block below to enable */
-/*
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
-    display: none !important;
-}
-*/
 
 /* ==========================================
    DIRECTORY & DISCOVERY
@@ -283,8 +282,25 @@ button[aria-label="Cheer"] {
 }
 
 /* ==========================================
-   LEADERBOARD ELEMENTS (OPTIONAL)
+   PROMOTION (usually removed after the promotion ends.)
    ========================================== */
+
+/* promotional content banner below player */
+div[class*="giftExpirationCallout"] {
+    display: none !important;
+}
+
+/* ==========================================
+   OPTIONAL FEATURES (COMMENTED OUT BY DEFAULT)
+   ========================================== */
+
+/* Hide extra tags beyond first 3 - Uncomment block below to enable */
+/*
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
+    display: none !important;
+}
+*/
 
 /* Hide leaderboard section - Uncomment block below to enable */
 /*
@@ -305,13 +321,11 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }
-*/
 
-/* ==========================================
-   PROMOTION (usually removed after the promotion ends.)
-   ========================================== */
-
-/* promotional content banner below player */
-div[class*="giftExpirationCallout"] {
+/* Hide extra tags beyond first 3 - Uncomment block below to enable */
+/*
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
+.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
     display: none !important;
 }
+*/

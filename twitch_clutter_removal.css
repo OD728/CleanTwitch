@@ -12,7 +12,7 @@
    - Hides Stories sections and navigation clutter
    - Removes monetization buttons (Bits, Cheer, One-Tap Combos)
    - Cleans up directory and profile elements
-   - Hides "About [Username]" headers and follow/unfollow buttons
+   - Hides "About [Username]" headers
    - Minimizes chat distractions and UI elements
    - Hides upcoming streams panels and "show more" separators
    - Enhances viewer count and stream statistics display
@@ -83,11 +83,6 @@ div[data-a-target="tray-search-input"] input {
 /* ==========================================
    PROFILE & USER ELEMENTS
    ========================================== */
-
-/* Hide follow/unfollow buttons */
-.grllUE {
-    display: none !important;
-}
 
 /* Hide share button on channel pages */
 button[data-a-target="share-button"] {

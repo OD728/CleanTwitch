@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         Twitch Clutter Removal
+@version      20250610.11.19
+@namespace    ?
+@description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
 /* ==========================================
    TWITCH.TV CLUTTER REMOVAL CSS
    ==========================================
@@ -266,8 +275,8 @@ button[data-a-target="top-nav-get-bits-button"] {
    CHAT ELEMENTS
    ========================================== */
 
-/* Hide chat collapse button */
-.toggle-visibility__right-column--expanded {
+/* Hide chat collapse button by data target (works in all modes) */
+button[data-a-target="right-column__toggle-collapse-btn"] {
     display: none !important;
 }
 
@@ -317,3 +326,4 @@ button[aria-label="Next leaderboard set"] {
     display: none !important;
 }
 */
+}

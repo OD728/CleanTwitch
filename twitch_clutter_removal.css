@@ -1,12 +1,3 @@
-/* ==UserStyle==
-@name         Twitch Clutter Removal
-@version      20250610.11.19
-@namespace    ?
-@description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
-@license      No License
-==/UserStyle== */
-
-@-moz-document domain("twitch.tv") {
 /* ==========================================
    TWITCH.TV CLUTTER REMOVAL CSS
    ==========================================
@@ -225,6 +216,11 @@ p[data-a-target="animated-channel-viewers-count"] {
    DIRECTORY & DISCOVERY
    ========================================== */
 
+/* Hide "Sort by" label */
+label[for="browse-sort-drop-down"] {
+    display: none !important;
+}
+
 /* Hide Games, IRL, Music, Creative category buttons in directory */
 .vertical-selector-card__container--lg {
     display: none;
@@ -299,15 +295,15 @@ div[class*="giftExpirationCallout"] {
    ========================================== */
 
 /* Hide extra tags beyond first 3 - Uncomment block below to enable */
-/*
+
 .InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
 .InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
     display: none !important;
 }
-*/
+
 
 /* Hide leaderboard section - Uncomment block below to enable */
-/*
+
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }
@@ -324,6 +320,4 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-first-entry,
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
-}
-*/
 }

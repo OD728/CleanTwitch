@@ -67,8 +67,10 @@ document.head.appendChild(style);
 ## ✨ What Gets Hidden
 
 ### ✅ Removed Elements
+
 - **"Following" text header** on following page
 - **"Browse" text header** on browse/directory pages
+- **"Sort by" label** on browse/directory pages
 - **Stories sections** in main area and sidebar
 - **"Open Stories" button** in sidebar
 - **Search icon** button
@@ -179,13 +181,6 @@ button[aria-label="Next leaderboard set"] {
 Want to keep some elements? Simply comment out or remove the corresponding CSS rules:
 
 ```css
-/* To keep follow/unfollow buttons, comment out this rule: */
-/*
-.grllUE {
-    display: none !important;
-}
-*/
-
 /* To keep share buttons, comment out this rule: */
 /*
 button[data-a-target="share-button"] {
@@ -199,6 +194,8 @@ button[data-a-target="share-button"] {
     display: none !important;
 }
 
+/* Alternative selector for About section title */
+/*
 h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
     display: none !important;
 }
@@ -214,31 +211,6 @@ h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
 /* To keep One-Tap Combos modal button, comment out this rule: */
 /*
 .oneTapIngressButton--inGsR {
-    display: none !important;
-}
-*/
-
-/* To keep upcoming streams panels and show more separators, comment out these rules: */
-/*
-header[aria-label="Upcoming Streams"] {
-    display: none !important;
-}
-
-h2[data-a-target="upcoming-streams-header"] {
-    display: none !important;
-}
-
-header[aria-label="Upcoming Streams"],
-header:has(h2[data-a-target="upcoming-streams-header"]) {
-    display: none !important;
-}
-
-.Layout-sc-1xcs6mc-0.show-more__hidden {
-    display: none !important;
-}
-
-header[aria-label="Upcoming Streams"] + div,
-header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
 }
 */
@@ -372,6 +344,8 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 
 ### Latest Updates (2025)
 
+* **Added**: Hide "Sort by" label on browse pages.
+    * New rule removes the label for the sort dropdown, creating a cleaner look.
 - **Fixed**: Chat collapse button hiding in Theater mode
   - Updated selector to use `data-a-target="right-column__toggle-collapse-btn"`
   - Now properly hides the collapse button in both regular and Theater mode layouts

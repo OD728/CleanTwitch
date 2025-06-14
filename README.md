@@ -83,15 +83,15 @@ document.head.appendChild(style);
 - **Category buttons** in directory (Games, IRL, Music, Creative)
 - **Upcoming Streams panels** (titles and content grids)
 - **"Show more" line separators** on directory pages
-- **Get Bits button**
-- **Cheer button**
+- **Get Bits/Turbo button**
+- **Cheer button (Chat)**
 - **One-Tap Combos modal button**
 - **Chat collapse button**
 - **Viewer count SVG icon for Stream Together and normal Stream**
 - **Clock icon** in uptime display (FFZ)
 - **Gauge icon** in player stats (FFZ)
 - **Leaderboard sections** (commented out by default)
-- **Extra tags beyond first 3** (commented out by default)
+- **Hide Extra tags beyond first 3** (commented out by default)
 
 ### 💡 Modified Elements
 - **Viewer count and uptime display** - Centered and standardized font sizes
@@ -344,8 +344,9 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 
 ### Latest Updates (2025)
 
-- **Added**: Hide "Whisper" button on the followed channels directory page.
-- **Added**: Hide "Sort by" label on browse pages.
+* **Added/Fixed**: Improved the optional rule for hiding the Turbo/Ad-Free button with a more reliable selector targeting its specific icon.
+* **Added**: New optional feature to hide the collaboration/squad stream viewer sorting bubble.
+* **Added**: Hide "Sort by" label on browse pages.
     * New rule removes the label for the sort dropdown, creating a cleaner look.
 - **Fixed**: Chat collapse button hiding in Theater mode
   - Updated selector to use `data-a-target="right-column__toggle-collapse-btn"`

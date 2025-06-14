@@ -89,6 +89,11 @@ button[data-a-target="share-button"] {
     display: none !important;
 }
 
+/* Hide Whisper button only on directory following page */
+.user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
+    display: none !important;
+}
+
 /* ==========================================
    STREAM & CONTENT ELEMENTS
    ========================================== */

@@ -92,7 +92,7 @@ button[data-a-target="share-button"] {
 /* Hide Whisper button only on directory following page */
 .user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
     display: none !important;
-}
+}   
 
 /* ==========================================
    STREAM & CONTENT ELEMENTS
@@ -221,11 +221,6 @@ p[data-a-target="animated-channel-viewers-count"] {
    DIRECTORY & DISCOVERY
    ========================================== */
 
-/* Hide "Sort by" label */
-label[for="browse-sort-drop-down"] {
-    display: none !important;
-}
-
 /* Hide Games, IRL, Music, Creative category buttons in directory */
 .vertical-selector-card__container--lg {
     display: none;
@@ -266,6 +261,16 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
 button[data-a-target="top-nav-get-bits-button"] {
     display: none !important;
 }
+
+/* Hide Turbo/Ad-Free button using specific class combination */
+button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg path[d*="M10.114 9.622"]) {
+    display: none !important;
+}
+
+/* Alternative: Hide Turbo button by targeting the specific SVG icon */
+button:has(svg path[d*="M18 7h-2V4H2v12h14v-3h2V7zm-4-1v3h2v2h-2v3H4V6h10z"]) {
+    display: none !important;
+}
    
 /* Hide One-Tap Combos modal button */
 .oneTapIngressButton--inGsR {
@@ -287,11 +292,16 @@ button[aria-label="Cheer"] {
 }
 
 /* ==========================================
-   PROMOTION (usually removed after the promotion ends.)
+   PROMOTION
    ========================================== */
 
 /* promotional content banner below player */
 div[class*="giftExpirationCallout"] {
+    display: none !important;
+}
+
+/* Hide collaboration viewer sorting information bubble in directory/all */
+.Layout-sc-1xcs6mc-0.kgTSVu {
     display: none !important;
 }
 
@@ -300,16 +310,14 @@ div[class*="giftExpirationCallout"] {
    ========================================== */
 
 /* Hide extra tags beyond first 3 - Uncomment block below to enable */
-
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
+/*.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
 .InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
     display: none !important;
-}
+}*/
 
 
 /* Hide leaderboard section - Uncomment block below to enable */
-
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
+/*.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }
 
@@ -325,4 +333,4 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-first-entry,
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
-}
+}*/

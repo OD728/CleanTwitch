@@ -344,6 +344,7 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 
 ### Latest Updates (2025)
 
+- **Added**: Hide "Whisper" button on the followed channels directory page.
 - **Added**: Hide "Sort by" label on browse pages.
     * New rule removes the label for the sort dropdown, creating a cleaner look.
 - **Fixed**: Chat collapse button hiding in Theater mode

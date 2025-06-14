@@ -1,3 +1,12 @@
+/* ==UserStyle==
+@name         Twitch Clutter Removal
+@version      20250610.11.19
+@namespace    ?
+@description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
 /* ==========================================
    TWITCH.TV CLUTTER REMOVAL CSS
    ==========================================
@@ -262,13 +271,11 @@ button[data-a-target="top-nav-get-bits-button"] {
     display: none !important;
 }
 
-/* Hide Turbo/Ad-Free button using specific class combination */
+/* Hide Ad-Free/Manage Turbo button using specific class combination */
 button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg path[d*="M10.114 9.622"]) {
     display: none !important;
 }
-
-/* Alternative: Hide Turbo button by targeting the specific SVG icon */
-button:has(svg path[d*="M18 7h-2V4H2v12h14v-3h2V7zm-4-1v3h2v2h-2v3H4V6h10z"]) {
+.InjectLayout-sc-1i43xsx-0.iDMNUO button:has(svg path[d*="M16 4H2v12h14v-3h2V7h-2V4zm-5.886"]) {
     display: none !important;
 }
    
@@ -334,3 +341,4 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }*/
+}

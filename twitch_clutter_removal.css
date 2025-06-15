@@ -230,6 +230,11 @@ p[data-a-target="animated-channel-viewers-count"] {
    DIRECTORY & DISCOVERY
    ========================================== */
 
+/* Hide "Sort by" label */
+label[for="browse-sort-drop-down"] {
+    display: none !important;
+}    
+    
 /* Hide Games, IRL, Music, Creative category buttons in directory */
 .vertical-selector-card__container--lg {
     display: none;
@@ -265,7 +270,7 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
 /* Hide collaboration viewer sorting information bubble in directory/all */
 .Layout-sc-1xcs6mc-0.kgTSVu {
     display: none !important;
-}   
+}
 
 /* ==========================================
    MONETIZATION ELEMENTS

@@ -262,6 +262,11 @@ header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
 }
 
+/* Hide collaboration viewer sorting information bubble in directory/all */
+.Layout-sc-1xcs6mc-0.kgTSVu {
+    display: none !important;
+}   
+
 /* ==========================================
    MONETIZATION ELEMENTS
    ========================================== */
@@ -295,20 +300,6 @@ button[data-a-target="right-column__toggle-collapse-btn"] {
 
 /* Hide Cheer button */
 button[aria-label="Cheer"] {
-    display: none !important;
-}
-
-/* ==========================================
-   PROMOTION
-   ========================================== */
-
-/* promotional content banner below player */
-div[class*="giftExpirationCallout"] {
-    display: none !important;
-}
-
-/* Hide collaboration viewer sorting information bubble in directory/all */
-.Layout-sc-1xcs6mc-0.kgTSVu {
     display: none !important;
 }
 

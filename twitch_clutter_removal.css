@@ -127,6 +127,11 @@ h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
     display: none !important;
 }
 
+/* Hide recap banners */
+article:has(a[href*="/recaps/"]) {
+    display: none !important;
+}
+
 /* ==========================================
    VIEWER COUNT ELEMENTS
    ========================================== */

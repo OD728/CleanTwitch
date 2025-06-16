@@ -13,6 +13,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
 - **Chat Cleanup**: Removes chat collapse button (Leaderboard as well but it's default off)
 - **Stream Discovery**: Hides "Upcoming Streams" panels and "show more" separators
+- **Content Recap**: Removes recap banners and promotional content
 - **Visual Polish**: Makes info boxes transparent and removes search bar borders
 - **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics
 - **Tag Management**: Optional feature to limit displayed tags (disabled by default)
@@ -83,6 +84,7 @@ document.head.appendChild(style);
 - **Category buttons** in directory (Games, IRL, Music, Creative)
 - **Upcoming Streams panels** (titles and content grids)
 - **"Show more" line separators** on directory pages
+- **Recap banners** and promotional content links
 - **Get Bits/Turbo button**
 - **Cheer button (Chat)**
 - **One-Tap Combos modal button**
@@ -204,6 +206,13 @@ h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
 /* To keep subscriber goals, comment out this rule: */
 /*
 .Layout-sc-1xcs6mc-0.iSXDpX {
+    display: none !important;
+}
+*/
+
+/* To keep recap banners, comment out this rule: */
+/*
+article:has(a[href*="/recaps/"]) {
     display: none !important;
 }
 */
@@ -343,6 +352,9 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 ## 📋 Changelog
 
 ### Latest Updates (2025)
+- **Added**: Hide recap banners
+  - New rule removes recap banners and promotional content links
+  - Targets article elements containing recap links for cleaner content browsing
 - **Removed**: Promotion (Sub Discound)
   
 * **Added/Fixed**: Improved the optional rule for hiding the Turbo/Ad-Free button with a more reliable selector targeting its specific icon.

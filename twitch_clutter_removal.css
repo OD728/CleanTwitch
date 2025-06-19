@@ -323,6 +323,10 @@ button[aria-label="Cheer"] {
     display: none !important;
 }*/
 
+/* Hide Gift a Sub button */
+/*button[data-a-target="gift-button"] {
+    display: none !important;
+}*/
 
 /* Hide leaderboard section - Uncomment block below to enable */
 /*.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
@@ -342,4 +346,5 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }*/
+
 }

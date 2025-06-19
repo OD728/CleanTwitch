@@ -66,16 +66,6 @@ document.head.appendChild(style);
 - **📁 [Download CSS File](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)** - Right-click and "Save as" to download
 - **🔗 [Raw CSS File](https://raw.githubusercontent.com/ODRise/CleanTwitch/refs/heads/main/twitch_clutter_removal.css)** - Direct link for browser extensions
 
-### Installation Methods
-
-**For Stylus/Cascadea:**
-1. Copy the CSS from the file above, OR
-2. Use the raw GitHub URL directly in your extension
-
-**For Browser Dev Tools:**
-1. Copy the CSS from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
-2. Follow the Developer Tools method above
-
 ## ✨ What Gets Hidden
 
 ### ✅ Removed Elements
@@ -246,7 +236,7 @@ Want to further enhance your Twitch experience? Here are some recommended additi
 
 ### 🌙 Theming
 - **[Catppuccin for Twitch](https://github.com/catppuccin/userstyles/tree/main/styles/twitch)** - Beautiful, soothing pastel theme that works great with this clutter removal CSS
-- **[Twitch Title Truncator](https://github.com/ODRise/STwitchT)** - A lightweight userscript that automatically truncates long Twitch stream titles and displays the full title on hover.
+- **[Twitch Title Truncator](https://github.com/ODRise/STwitchT)** - A lightweight userscript that automatically shortens long Twitch stream titles and displays the full title on hover.
 
 ### 🔧 Browser Extensions
 - **[FrankerFaceZ](https://github.com/FrankerFaceZ/FrankerFaceZ)** - Comprehensive Twitch enhancement extension with extensive customization options

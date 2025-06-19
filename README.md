@@ -24,8 +24,6 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 ### Method 1: Browser Extension (Recommended)
 
-### Method 1: Browser Extension (Recommended)
-
 1. Install a userCSS extension:
    - **Chrome/Edge**: [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
    - **Firefox**: [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)

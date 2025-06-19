@@ -24,16 +24,27 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 ### Method 1: Browser Extension (Recommended)
 
+### Method 1: Browser Extension (Recommended)
+
 1. Install a userCSS extension:
    - **Chrome/Edge**: [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
    - **Firefox**: [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/)
    - **Safari**: [Cascadea](https://apps.apple.com/us/app/cascadea/id1432182561)
 
-2. **Option A**: Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
-3. **Option B**: Use the raw GitHub URL directly: [Twitch Clutter Removal CSS Raw](https://raw.githubusercontent.com/ODRise/CleanTwitch/refs/heads/main/twitch_clutter_removal.css)
-4. Create a new style in your extension
-5. Set the domain to `twitch.tv`
-6. Paste the CSS code or URL and save
+2. **Option A**: Use the raw GitHub URL directly: [Twitch Clutter Removal CSS Raw](https://raw.githubusercontent.com/ODRise/CleanTwitch/refs/heads/main/twitch_clutter_removal.css)
+   - Clicking this link will allow you to directly install the CSS as a **userstyle** in Stylus (or compatible extensions).
+   
+   OR
+
+   **Option B**: Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/ODRise/CleanTwitch/blob/main/twitch_clutter_removal.css)
+   - Manually copy the CSS, then paste it into your Stylus extension.
+
+3. Create a new style in your extension
+4. Set the domain to `twitch.tv`
+5. Paste the CSS code or URL and save
+
+> **Tip**: After installation, you can optionally enable additional features (e.g., hiding extra tags, leaderboard sections, etc.) by uncommenting the relevant sections in the CSS.
+
 
 ### Method 2: Browser Developer Tools (Temporary)
 

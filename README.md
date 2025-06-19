@@ -7,7 +7,7 @@ A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for 
 This CSS hides various clutter elements on Twitch.tv without breaking core functionality:
 
 - **Stories & Navigation**: Removes Stories sections and navigation clutter
-- **Monetization**: Hides Get Bits, Cheer buttons, and One-Tap Combos modal
+- **Monetization**: Hides Get Bits, Cheer, Gift a Sub, and One-Tap Combos modal buttons
 - **Social Elements**: Removes Share buttons, and subscriber goals
 - **Profile Elements**: Hides "About [Username]" headers and titles
 - **Directory Clutter**: Hides category buttons (Games, IRL, Music, Creative)
@@ -17,6 +17,8 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 - **Visual Polish**: Makes info boxes transparent and removes search bar borders
 - **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics
 - **Tag Management**: Optional feature to limit displayed tags (disabled by default)
+- **Leaderboard Management**: Optional feature to hide leaderboard sections (disabled by default)
+- **Gift a Sub Button**: Optional feature to hide the "Gift a Sub" button (disabled by default)
 
 ## 🚀 Installation
 
@@ -81,6 +83,7 @@ document.head.appendChild(style);
 - **Share buttons** on channel pages
 - **"About [Username]" headers** and titles on channel pages
 - **Subscriber and follower goals** (channel page goals section)
+- **Gift a Sub buttons** (channel header and goals)
 - **Category buttons** in directory (Games, IRL, Music, Creative)
 - **Upcoming Streams panels** (titles and content grids)
 - **"Show more" line separators** on directory pages
@@ -92,8 +95,13 @@ document.head.appendChild(style);
 - **Viewer count SVG icon for Stream Together and normal Stream**
 - **Clock icon** in uptime display (FFZ)
 - **Gauge icon** in player stats (FFZ)
+
+### ⚠️ Removed Elements Optional
+
 - **Leaderboard sections** (commented out by default)
 - **Hide Extra tags beyond first 3** (commented out by default)
+- **Gift a Sub button** (commented out by default)
+- **Leaderboard hiding** (commented out by default)
 
 ### 💡 Modified Elements
 - **Viewer count and uptime display** - Centered and standardized font sizes
@@ -154,6 +162,22 @@ This will:
 - Clean up cluttered tag displays on popular streamers' channels
 
 
+#### Gift a Sub Button
+To hide the "Gift a Sub" button, uncomment this section in the CSS:
+
+```css
+/* Hide Gift a Sub button */
+button[data-a-target="gift-button"] {
+    display: none !important;
+}
+```
+
+This will:
+- Hide sub gifting buttons in the channel header and channel goals.
+
+*Note: This does not affect the sub gifting buttons that may appear directly in chat. This functionality is also configurable in FFZ.*
+
+
 #### Leaderboard Hiding
 To hide leaderboard sections (sub gift rankings), uncomment this section in the CSS:
 
@@ -183,90 +207,17 @@ button[aria-label="Next leaderboard set"] {
 Want to keep some elements? Simply comment out or remove the corresponding CSS rules:
 
 ```css
+/* To keep Gift a Sub buttons, comment out this rule: */
+/*
+button[data-a-target="gift-button"],
+button[data-test-selector="channel-goals-gift-a-sub-button"] {
+    display: none !important;
+}
+*/
+
 /* To keep share buttons, comment out this rule: */
 /*
 button[data-a-target="share-button"] {
-    display: none !important;
-}
-*/
-
-/* To keep "About [Username]" headers, comment out these rules: */
-/*
-.Layout-sc-1xcs6mc-0.hOA-Dtm {
-    display: none !important;
-}
-
-/* Alternative selector for About section title */
-/*
-h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
-    display: none !important;
-}
-*/
-
-/* To keep subscriber goals, comment out this rule: */
-/*
-.Layout-sc-1xcs6mc-0.iSXDpX {
-    display: none !important;
-}
-*/
-
-/* To keep recap banners, comment out this rule: */
-/*
-article:has(a[href*="/recaps/"]) {
-    display: none !important;
-}
-*/
-
-/* To keep One-Tap Combos modal button, comment out this rule: */
-/*
-.oneTapIngressButton--inGsR {
-    display: none !important;
-}
-*/
-
-/* To disable viewer count customization, comment out these rules: */
-/*
-.ffz--meta-tray {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.ScSvgWrapper-sc-wkgzod-0.cqgFFC.tw-svg {
-    display: none !important;
-}
-
-.ffz--native-viewers-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.live-time {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-
-.ffz-i-clock {
-    display: none !important;
-}
-
-p[data-a-target="animated-channel-viewers-count"] {
-    font-size: 1.3rem !important;
-}
-
-.ffz-stat-text {
-    font-size: 1.3rem !important;
-    font-weight: 400 !important;
-    line-height: 1.5 !important;
-}
-*/
-
-/* To keep all tags visible, comment out this rule: */
-/*
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
     display: none !important;
 }
 */
@@ -279,49 +230,6 @@ p[data-a-target="animated-channel-viewers-count"] {
 - ✅ **Edge** - Full support
 - ✅ **Safari** - Full support
 - ✅ **Mobile browsers** - Partial support (some elements may not apply)
-
-## 🐛 Troubleshooting
-
-### Elements Not Hidden
-1. **Clear browser cache** and refresh Twitch
-2. **Check CSS is applied** in browser dev tools (F12)
-3. **Verify domain** is set to `twitch.tv` in your CSS extension
-4. **Try force refresh** with Ctrl+F5 (Windows) or Cmd+Shift+R (Mac)
-
-### Twitch Updates Breaking CSS
-Twitch occasionally updates their CSS class names. If elements reappear:
-
-1. **Check for script updates** in this repository
-2. **Report the issue** with screenshots of what's no longer hidden
-3. **Temporary fix**: Use browser dev tools to find new class names
-
-### Performance Issues
-This CSS is lightweight and shouldn't affect performance. If you experience issues:
-
-1. **Disable other extensions** temporarily to test
-2. **Check browser console** for errors (F12 → Console)
-3. **Try disabling specific CSS sections** to isolate the problem
-
-## 📱 Mobile Support
-
-The CSS works on mobile browsers but with limitations:
-- Some mobile-specific elements may not be targeted
-- Touch interfaces may behave differently
-- Consider using Twitch mobile app for better mobile experience
-
-## 🔄 Updates
-
-Twitch regularly updates their interface, which may break some CSS rules. 
-
-**When this happens:**
-1. Check this repository for updates
-2. Report broken elements in Issues
-3. Provide screenshots and browser info
-
-**Staying updated:**
-- ⭐ Star this repository to get notifications
-- 👀 Watch for releases
-- 🔔 Enable notifications for Issues
 
 ## 🎨 Recommended Enhancements
 
@@ -345,85 +253,60 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 *Note: These enhancements are independent of this CSS and can be used together or separately based on your preferences.*
 
-## 📝 License
-
-This CSS is provided as-is for personal use. Feel free to modify and share.
-
 ## 📋 Changelog
 
 ### Latest Updates (2025)
-- **Added**: Hide recap banners
+- ✅ **Added**: Hide sub gifting buttons in the channel header and channel goals.
+  - New rule hides the "Gift a Sub" button in the main channel header and within the channel goals panel.
+  - Note: This does not affect the sub gifting buttons that may appear directly in chat. This functionality is also configurable in FFZ.
+- ✅ **Added**: Hide recap banners
   - New rule removes recap banners and promotional content links
   - Targets article elements containing recap links for cleaner content browsing
-- **Removed**: Promotion (Sub Discound)
+- ❌ **Removed**: Promotion (Sub Discount)
   
-* **Added/Fixed**: Improved the optional rule for hiding the Turbo/Ad-Free button with a more reliable selector targeting its specific icon.
-* **Added**: New optional feature to hide the collaboration/squad stream viewer sorting bubble.
-* **Added**: Hide "Sort by" label on browse pages.
+* ✅ **Added/Fixed**: Improved the optional rule for hiding the Turbo/Ad-Free button with a more reliable selector targeting its specific icon.
+* ✅ **Added**: New optional feature to hide the collaboration/squad stream viewer sorting bubble.
+* ✅ **Added**: Hide "Sort by" label on browse pages.
     * New rule removes the label for the sort dropdown, creating a cleaner look.
-- **Fixed**: Chat collapse button hiding in Theater mode
+- ✅ **Fixed**: Chat collapse button hiding in Theater mode
   - Updated selector to use `data-a-target="right-column__toggle-collapse-btn"`
   - Now properly hides the collapse button in both regular and Theater mode layouts
   - Added backup `aria-label` selector for additional compatibility
-- **Added**: "About [Username]" header hiding
+- ✅ **Added**: "About [Username]" header hiding
   - Hides "About [Username]" section headers on channel pages
   - Includes both main container and alternative title selectors
   - Keeps about section content visible while removing headers
-- **Added**: Follow/unfollow button hiding
+- ✅ **Added**: Follow/unfollow button hiding
   - Removes follow and unfollow buttons from channel pages
   - Cleans up social interaction elements for distraction-free viewing
-- **Improved**: CSS organization and structure
-  - Reorganized Profile & User Elements section
-  - Added proper comments for all new features
-- **Added**: Tag limiting feature (disabled by default)
-  - Option to hide extra tags beyond the first 3 on channel pages
-  - Permanently removes cluttered tag displays
-  - Disabled by default to preserve user choice
-- **Added**: Twitch Title Truncator
-- **Added**: Promotional content banner below player
-- **Fixed**: Sidebar username display issue
-  - Made viewer count selectors more specific to prevent hiding usernames in left sidebar
-  - Added parent container selectors to target only video player and channel info areas
-- **Added**: Hide "Browse" header on directory pages
-  - New rule to remove the large "Browse" text at the top of browse/directory pages
-- **Improved**: CSS organization and structure
-  - Created new "Page Headers & Titles" section
-  - Reorganized all CSS rules into logical sections for better maintainability
-  - Properly formatted optional leaderboard rules as a commented block
-- **Enhanced**: Complete viewer count elements styling
-  - Native Twitch viewer count now matches FFZ stat styling
-  - Removes viewer count icon and descriptive "XXX viewers" text
-  - Removes uptime descriptive text ("XXX since live stream started")
-  - Added gauge icon removal for FFZ player stats
-  - Unified font styling across all stream statistics (1.3rem, 400 weight)
-- **Added**: CSS variable usage for better theme compatibility
-- **Improved**: More specific selectors for native Twitch elements
-- **Added**: FFZ settings requirements documentation
+
+<details>
+<summary>Previous Changelog</summary>
 
 ### Previous Updates
-- **Added**: Hide "Open Stories" button and container in sidebar
-- **Removed**: Chat top banner/header hiding
-- **Removed**: Banner for sub & TC events hiding (`.fSpCrC` rule)
+- ✅ **Added**: Hide "Open Stories" button and container in sidebar
+- ❌ **Removed**: Chat top banner/header hiding
+- ❌ **Removed**: Banner for sub & TC events hiding (`.fSpCrC` rule)
 - **Streamlined**: Goals hiding to use more specific selector (`.Layout-sc-1xcs6mc-0.iSXDpX`)
 - **Enhanced**: About section panel transparency with specific selector (`.Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content`)
-- **Added**: Leaderboard hiding (commented out by default for optional use)
+- ✅ **Added**: Leaderboard hiding (commented out by default for optional use)
 - **Improved**: Code organization and cleanup for better maintainability
 
 ### Earlier Updates
-- **Added**: Hide "Following" title header with multiple selectors
-- **Added**: Hide Stories sections in main area and sidebar  
-- **Added**: About section panel background transparency
-- **Added**: Viewer count customization (enabled by default)
+- ✅ **Added**: Hide "Following" title header with multiple selectors
+- ✅ **Added**: Hide Stories sections in main area and sidebar  
+- ✅ **Added**: About section panel background transparency
+- ✅ **Added**: Viewer count customization (enabled by default)
   - Centers viewer count and uptime display
   - Hides viewer count SVG icon (Stream Together) and clock icon from FFZ
   - Standardizes font sizes for consistency
 - **Enhanced**: Monetization button selectors for better stability
-- **Added**: Search bar border removal for cleaner appearance
+- ✅ **Added**: Search bar border removal for cleaner appearance
 
 ### Initial Features
-- **Added**: Hide One-Tap Combos modal button
-- **Added**: Hide share button on channel pages
-- **Fixed**: Improved "Upcoming Streams" targeting to prevent hiding legitimate channel listings
+- ✅ **Added**: Hide One-Tap Combos modal button
+- ✅ **Added**: Hide share button on channel pages
+- ✅ **Fixed**: Improved "Upcoming Streams" targeting to prevent hiding legitimate channel listings
 - **Enhanced**: More comprehensive "Upcoming Streams" header removal with multiple selectors
 - Hide Stories sections and navigation elements
 - Remove monetization buttons
@@ -431,6 +314,8 @@ This CSS is provided as-is for personal use. Feel free to modify and share.
 - Minimize chat distractions
 - Hide "show more" separators
 - Make info boxes transparent
+</details>
+
 
 ## 🤝 Contributing
 

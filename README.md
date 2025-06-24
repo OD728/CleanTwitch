@@ -257,6 +257,7 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 #### June 2025
 - 🔧 **Fixed**: Subscription/follower goals hiding with more effective selector
 - 🔧 **Fixed**: "About [Username]" header section and section panel background transparency
+- 🔧 **Fixed**: "Hide extra tags beyond first 3
  
 ### Latest Updates (2025)
 - ✅ **Added**: Hide sub gifting buttons in the channel header and channel goals.

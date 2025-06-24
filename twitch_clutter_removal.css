@@ -26,7 +26,7 @@
    - Hides upcoming streams panels and "show more" separators
    - Enhances viewer count and stream statistics display
    - Makes info boxes transparent for cleaner appearance
-   - Optional features: tag limiting and leaderboard hiding (disabled by default)
+   - Optional features: tag limiting and leaderboard hiding gift sub button (disabled by default)
    
    ========================================== */
 
@@ -35,12 +35,12 @@
    ========================================== */
 
 /* Hide "Following" title header */
-.evhWqB h1.kYYPPM.lbYztg {
+.iHfEta h1.tw-title {
     display: none !important;
 }
 
 /* Hide "Browse" title header */
-.kzgEsT h1.kYYPPM.lbYztg {
+.kshrU h1.tw-title {
     display: none !important;
 }
 
@@ -113,12 +113,12 @@ button[data-a-target="share-button"] {
 }
 
 /* Make about section panel background transparent */
-.Layout-sc-1xcs6mc-0.cVPBKX.about-section__panel--content {
+.Layout-sc-1xcs6mc-0.hgKyXI.about-section__panel--content {
     background-color: transparent !important;
 }
 
 /* Hide "About [Username]" header section */
-.Layout-sc-1xcs6mc-0.hOA-Dtm {
+.Layout-sc-1xcs6mc-0.gOGOyJ {
     display: none !important;
 }
 
@@ -346,5 +346,4 @@ button[aria-label="Next leaderboard set"] {
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }*/
-
 }

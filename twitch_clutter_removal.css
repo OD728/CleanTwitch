@@ -318,8 +318,7 @@ button[aria-label="Cheer"] {
    ========================================== */
 
 /* Hide extra tags beyond first 3 - Uncomment block below to enable */
-/*.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.gGAvuV:nth-child(n+5),
-.InjectLayout-sc-1i43xsx-0.dwGPiE .InjectLayout-sc-1i43xsx-0.hCqJdc:nth-child(n+5) {
+/*.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
     display: none !important;
 }*/
 

@@ -254,6 +254,12 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+#### June 2025
+- 🔧 **Fixed**: Updated CSS selectors for Twitch class name changes
+  - **About section transparency**: Updated from `.cVPBKX` to `.hgKyXI` 
+  - **"About [Username]" header hiding**: Updated from `.hOA-Dtm` to `.gOGOyJ`
+  - Both rules now include "(Updated for new Twitch classes)" notation for easy tracking
+ 
 ### Latest Updates (2025)
 - ✅ **Added**: Hide sub gifting buttons in the channel header and channel goals.
   - New rule hides the "Gift a Sub" button in the main channel header and within the channel goals panel.

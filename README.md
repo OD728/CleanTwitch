@@ -255,15 +255,8 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 ## 📋 Changelog
 
 #### June 2025
-- 🔧 **Improved**: 
-  - **New approach**: Now uses `.Layout-sc-1xcs6mc-0.CNDKn` to hide the entire goals section container
-  - **Better results**: Completely removes goals section without leaving empty space or cramped layouts
-  - **Cleaner implementation**: Single rule replaces multiple spacing fixes
-   
-- 🔧 **Fixed**: Updated CSS selectors for Twitch class name changes
-  - **About section transparency**: Updated from `.cVPBKX` to `.hgKyXI` 
-  - **"About [Username]" header hiding**: Updated from `.hOA-Dtm` to `.gOGOyJ`
-  - Both rules now include "(Updated for new Twitch classes)" notation for easy tracking
+- 🔧 **Fixed**: Subscription/follower goals hiding with more effective selector
+- 🔧 **Fixed**: "About [Username]" header section and section panel background transparency
  
 ### Latest Updates (2025)
 - ✅ **Added**: Hide sub gifting buttons in the channel header and channel goals.

@@ -31,6 +31,22 @@
    ========================================== */
 
 /* ==========================================
+    LAYOUT FIXES
+   ========================================== */
+
+/* Reposition side nav collapse button below "Followed Channels" */
+.Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
+    order: -1 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Make the followed channels header container flex to allow reordering */
+.Layout-sc-1xcs6mc-0.hbssTE.followed-side-nav-header__dropdown-trigger {
+    display: flex !important;
+    flex-direction: column !important;
+} 
+   
+/* ==========================================
    PAGE HEADERS & TITLES
    ========================================== */
 

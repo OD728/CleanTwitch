@@ -254,13 +254,17 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+#### July 2025
+- ✅ **Added**: Chat Bits "new item indicator" element
+  - removed the "new item indicator" element next to the Bits button
+
 #### June 2025
 - 🔧 **Fixed**: Collaboration viewer sorting information bubble in directory/all
 - 🔧 **Fixed**: Subscription/follower goals hiding with more effective selector
 - 🔧 **Fixed**: "About [Username]" header section and section panel background transparency
 - 🔧 **Fixed**: Hide extra tags beyond first 3
 - 🔧 **Fixed**: Button overlap issue between collapse and sort buttons in sidebar
- 
+
 ### Latest Updates (2025)
 - ✅ **Added**: Hide sub gifting buttons in the channel header and channel goals.
   - New rule hides the "Gift a Sub" button in the main channel header and within the channel goals panel.

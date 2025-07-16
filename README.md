@@ -42,7 +42,7 @@ Certain features are commented out by default and can be enabled by uncommenting
 -   **Tag Limiting**: `/* Hide extra tags beyond first 3 */`.
 -   **Hide Gift a Sub Button**: `/* Hide Gift a Sub button */`.
 -   **Hide Leaderboard**: `/* Hide leaderboard section */`.
--   **Hide Pinned cheers**: `/* Hide cheers */`.
+-   **Hide Pinned cheers**: `/* Hide pinned cheers */`.
 -   **Hide Bits Leaderboard**: `/* Hide the entire Bits Leaderboard section */`.
 
 Want to keep specific elements? Simply comment out or remove their corresponding CSS rules.

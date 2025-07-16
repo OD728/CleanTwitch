@@ -339,17 +339,34 @@ button[aria-label="Cheer"] {
    OPTIONAL FEATURES (COMMENTED OUT BY DEFAULT)
    ========================================== */
 
+/* ==========================================
+    OPTIONAL FEATURES (COMMENTED OUT BY DEFAULT)
+   ========================================== */
+   
+/* Hide pinned chat messages (e.g., cheers) - Uncomment block below to enable*/
+/*.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list {
+    display: none !important;
+}
+.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
+    display: none !important;
+}*/
+
+/* Hide the entire Bits Leaderboard section - Uncomment block below to enable*/
+/*.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry) {
+    display: none !important;
+}*/
+
 /* Hide extra tags beyond first 3 - Uncomment block below to enable */
 /*.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
     display: none !important;
 }*/
 
-/* Hide Gift a Sub button */
+/* Hide Gift a Sub button - Uncomment block below to enable*/
 /*button[data-a-target="gift-button"] {
     display: none !important;
 }*/
 
-/* Hide leaderboard section - Uncomment block below to enable */
+/* Hide leaderboard section - Uncomment block below to enable*/
 /*.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
     display: none !important;
 }

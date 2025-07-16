@@ -255,10 +255,8 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 ## 📋 Changelog
 
 #### July 2025
-- ✅ **Added**: Chat Bits "new item indicator" element
-  - removed the "new item indicator" element next to the Bits button
-- ✅ **Added**: Hide pinned chat messages
-  - New rules hide pinned messages in chat, including cheer messages and other paid-for pinned content
+- ✅ **Added**: Hide pinned cheer
+  - New rules hide pinned cheers in chat, including other paid-for pinned content
 - ✅ **Added**: Hide Bits Leaderboard
   - New rule hides the rotating Bits Leaderboard that displays top cheerers/sub gifters
 - ✅ **Added**: Chat Bits "new item indicator" element

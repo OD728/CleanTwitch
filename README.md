@@ -1,4 +1,7 @@
 # Twitch.tv Clutter Removal CSS
+![Version](https://img.shields.io/badge/version-1.5-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
 A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience.
 
@@ -20,20 +23,12 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 
 ## 🚀 Installation
 
-### Method 1: Browser Extension (Recommended)
+### Browser Extension (Recommended)
 
 1.  Install a userCSS extension like [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) (Chrome/Edge) or [Stylus](https://addons.mozilla.org/en-US/firefox/addon/styl-us/) (Firefox).
 2.  **Option A**: Use the raw GitHub URL directly: [Twitch Clutter Removal CSS Raw](https://raw.githubusercontent.com/OD728/CleanTwitch/refs/heads/main/twitch_clutter_removal.css).
 3.  **Option B**: Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/OD728/CleanTwitch/blob/main/twitch_clutter_removal.css) and manually paste it into your Stylus extension.
 4.  Create a new style, set the domain to `twitch.tv`, and save.
-
-### Method 2: Browser Developer Tools (Temporary)
-
-1.  Open Twitch.tv and press `F12`.
-2.  Go to the **Console** tab.
-3.  Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/OD728/CleanTwitch/blob/main/twitch_clutter_removal.css).
-4.  Paste this code and press Enter: `const style = document.createElement('style'); style.textContent = /* PASTE CSS HERE */; document.head.appendChild(style);`.
-    *Note: This method only lasts until you refresh the page*.
 
 ## 🛠️ Customization
 
@@ -46,11 +41,6 @@ Certain features are commented out by default and can be enabled by uncommenting
 -   **Hide Bits Leaderboard**: `/* Hide the entire Bits Leaderboard section */`.
 
 Want to keep specific elements? Simply comment out or remove their corresponding CSS rules.
-
-## 🖥️ Browser Compatibility
-
--   ✅ **Chrome/Chromium, Firefox, Edge, Safari**: Full support.
--   ✅ **Mobile Browsers**: Partial support.
 
 ## 🎨 Recommended Enhancements
 
@@ -104,4 +94,4 @@ Found an element that should be hidden or CSS stopped working? Create an **Issue
 
 ## ⚠️ Disclaimer
 
-This CSS only modifies the visual appearance of Twitch.tv, does not collect or modify data, and does not interfere with streaming or chat. It may require updates when Twitch changes its interface.
+This CSS only modifies the visual appearance of Twitch.tv, does not collect or modify data, and does not interfere with streaming or chat. It may require updates when Twitch changes its interface. Use at your own discretion. Not affiliated with Twitch Interactive, Inc.

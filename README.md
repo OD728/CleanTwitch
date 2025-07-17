@@ -3,23 +3,13 @@
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
-A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience.
+> Simplify your Twitch experience.
 
-## 🎯 What It Does
-
-This CSS hides various clutter elements on Twitch.tv without breaking core functionality:
-
--   **Navigation & Stories**: Removes Stories sections and navigation clutter.
--   **Monetization**: Hides Get Bits, Cheer, Gift a Sub, and One-Tap Combos modal buttons.
--   **Social Elements**: Removes Share buttons, and subscriber goals.
--   **Profile**: Hides "About [Username]" headers.
--   **Directory**: Hides category buttons (Games, IRL, Music, Creative).
--   **Chat**: Removes chat collapse button.
--   **Discovery**: Hides "Upcoming Streams" panels and "show more" separators.
--   **Content Recap**: Removes recap banners and promotional content.
--   **Visual Polish**: Makes info boxes transparent and removes search bar borders.
--   **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics.
--   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button.
+## What It Does
+This CSS hides clutter like:
+- Navigation sections, monetization buttons, social shares, & more.
+- It cleans up layout, viewer count, and content recaps.
+- *[Optional]*: Limits tags, hides leaderboard & specific buttons (see Customization).
 
 ## 🚀 Installation
 

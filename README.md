@@ -1,15 +1,25 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.5-blue.svg)
+![Version](https://img.shields.io/badge/version-1.6-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
-> Simplify your Twitch experience.
+A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience.
 
-## What It Does
-This CSS hides clutter like:
-- Navigation sections, monetization buttons, social shares, & more.
-- It cleans up layout, viewer count, and content recaps.
-- *[Optional]*: Limits tags, hides leaderboard & specific buttons (see Customization).
+## 🎯 What It Does
+
+This CSS hides various clutter elements on Twitch.tv without breaking core functionality:
+
+-   **Navigation & Stories**: Removes Stories sections and navigation clutter.
+-   **Monetization**: Hides Get Bits, Cheer, Gift a Sub, and One-Tap Combos modal buttons.
+-   **Social Elements**: Removes Share buttons, and subscriber goals.
+-   **Profile**: Hides "About [Username]" headers.
+-   **Directory**: Hides category buttons (Games, IRL, Music, Creative).
+-   **Chat**: Removes chat collapse button.
+-   **Discovery**: Hides "Upcoming Streams" panels and "show more" separators.
+-   **Content Recap**: Removes recap banners and promotional content.
+-   **Visual Polish**: Makes info boxes transparent and removes search bar borders.
+-   **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics.
+-   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button.
 
 ## 🚀 Installation
 
@@ -67,6 +77,7 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 ## 📋 Changelog
 
 #### July 2025
+- 🚀 Optimized: Code optimization – reduced file size by ~60% (from 8KB to 3KB) without losing functionality.
 - ✅ **Added**: Chat Bits "new item indicator" element – removed the "new item indicator" element next to the Bits button.
 - ✅ **Added**: Hide pinned chat messages (optional, commented out by default) – New rules hide pinned messages in chat, including cheer messages and other paid-for pinned content.
 - ✅ **Added**: Hide Bits Leaderboard (optional, commented out by default) – A new rule hides the rotating Bits Leaderboard that displays top cheerers/sub gifters.

@@ -19,7 +19,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 -   **Content Recap**: Removes recap banners and promotional content.
 -   **Visual Polish**: Makes info boxes transparent and removes search bar borders.
 -   **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics.
--   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button.
+-   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button. (at the bottom)
 
 ## 🚀 Installation
 
@@ -30,17 +30,6 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 3.  **Option B**: Copy the CSS code from [Twitch Clutter Removal CSS](https://github.com/OD728/CleanTwitch/blob/main/twitch_clutter_removal.css) and manually paste it into your Stylus extension.
 4.  Create a new style, set the domain to `twitch.tv`, and save.
 
-## 🛠️ Customization
-
-Certain features are commented out by default and can be enabled by uncommenting the relevant sections:
-
--   **Tag Limiting**: `/* Hide extra tags beyond first 3 */`.
--   **Hide Gift a Sub Button**: `/* Hide Gift a Sub button */`.
--   **Hide Leaderboard**: `/* Hide leaderboard section */`.
--   **Hide Pinned cheers**: `/* Hide pinned cheers */`.
--   **Hide Bits Leaderboard**: `/* Hide the entire Bits Leaderboard section */`.
-
-Want to keep specific elements? Simply comment out or remove their corresponding CSS rules.
 
 ## 🎨 Recommended Enhancements
 

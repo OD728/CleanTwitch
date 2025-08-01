@@ -90,17 +90,6 @@ div[role="presentation"].cbxBks,
     display: none !important;
 }
 
-/* Style viewer count and uptime text */
-strong[data-a-target="animated-channel-viewers-count"],
-strong[data-a-target="animated-channel-viewers-count"] span,
-.live-time > span[aria-hidden="true"],
-p[data-a-target="animated-channel-viewers-count"],
-.ffz-stat-text {
-    font-size: var(--font-size-6) !important;
-    font-weight: var(--font-weight-normal) !important;
-    line-height: var(--line-height-body) !important;
-}
-
 /* Hide redundant descriptions */
 .video-player__container .kvrzxX > p.CoreText-sc-1txzju1-0,
 .channel-root__info .kvrzxX > p.CoreText-sc-1txzju1-0,

@@ -65,6 +65,9 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+#### August 2025
+- 🔧 **Removed**: Viewer count and uptime text styling
+
 #### July 2025
 - 🚀 Optimized: Code optimization – reduced file size by ~60% (from 8KB to 3KB) without losing functionality.
 - ✅ **Added**: Chat Bits "new item indicator" element – removed the "new item indicator" element next to the Bits button.

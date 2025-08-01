@@ -10,6 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
+    
 /* Layout fixes */
 .Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
     order: -1 !important;
@@ -64,7 +65,15 @@ h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
 article:has(a[href*="/recaps/"]) {
     display: none !important;
 }
-    
+
+/* Center and style viewer count elements */
+.ffz--meta-tray,
+.ffz--native-viewers-container,
+.live-time {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
 .video-player__container .kvrzxX,
 .channel-root__info .kvrzxX {
     display: flex !important;
@@ -79,6 +88,17 @@ div[role="presentation"].cbxBks,
 .ffz-i-clock,
 .ffz-i-gauge {
     display: none !important;
+}
+
+/* Style viewer count and uptime text */
+strong[data-a-target="animated-channel-viewers-count"],
+strong[data-a-target="animated-channel-viewers-count"] span,
+.live-time > span[aria-hidden="true"],
+p[data-a-target="animated-channel-viewers-count"],
+.ffz-stat-text {
+    font-size: var(--font-size-6) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: var(--line-height-body) !important;
 }
 
 /* Hide redundant descriptions */

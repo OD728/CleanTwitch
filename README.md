@@ -19,7 +19,7 @@ This CSS hides various clutter elements on Twitch.tv without breaking core funct
 -   **Content Recap**: Removes recap banners and promotional content.
 -   **Visual Polish**: Makes info boxes transparent and removes search bar borders.
 -   **Viewer Count Styling**: Clean, unified display for viewer count and stream statistics.
--   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button. (at the bottom)
+-   **Optional Features (disabled by default)**: Limiting displayed tags, hiding leaderboards, and the "Gift a Sub" button etc. (at the bottom)
 
 ## 🚀 Installation
 

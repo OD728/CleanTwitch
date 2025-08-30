@@ -1,5 +1,5 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.7-blue.svg)
+![Version](https://img.shields.io/badge/version-1.8blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
@@ -66,6 +66,7 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 ## 📋 Changelog
 
 #### August 2025
+- ✅ **Added**: Optional rule to hide promotional event banners (e.g., SUBtember banner).
 - 🔧 **Removed**: Viewer count and uptime text styling
 
 #### July 2025

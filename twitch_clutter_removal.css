@@ -143,7 +143,8 @@ button[data-a-target="gift-button"],
 button[aria-label="Previous leaderboard set"],
 button[aria-label="Next leaderboard set"],
 .channel-leaderboard-header-first-entry,
-.channel-leaderboard-header-runner-up-entry {
+.channel-leaderboard-header-runner-up-entry,
+.Layout-sc-1xcs6mc-0.fvMgHN {
     display: none !important;
 }*/
 }

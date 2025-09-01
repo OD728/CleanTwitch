@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      1.7
+@version      1.9
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -131,20 +131,63 @@ button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg pat
 .Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
     display: none !important;
 }
-
+    
+/*-------------------------------------------------------------------------------------------------------------------------*/
 /* Optional features (commented out by default) */
-/*.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
-.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors),
+/* To enable a feature, remove the /* and */
+
+/* --- Hide Pinned Chat Messages & Cheers --- */
+/* Hides paid pinned messages and cheer messages at the top of chat. */
+/*
+.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
+.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
+    display: none !important;
+}
+*/
+
+/* --- Hide Promotional Banners --- */
+/* Hides large promotional banners, like the SUBtember event banner. */
+/*
+div[style*="/subtember2025/"] {
+    display: none !important;
+}
+*/
+
+/* --- Hide Channel Leaderboards --- */
+/* Hides the entire rotating leaderboard for top cheerers and gifters. */
+/*
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
-.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4),
-button[data-a-target="gift-button"],
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
 .channel-leaderboard-header-rotating__users,
 button[aria-label="Previous leaderboard set"],
 button[aria-label="Next leaderboard set"],
 .channel-leaderboard-header-first-entry,
-.channel-leaderboard-header-runner-up-entry,
-.Layout-sc-1xcs6mc-0.fvMgHN {
+.channel-leaderboard-header-runner-up-entry {
     display: none !important;
-}*/
+}
+*/
+
+/* --- Limit Displayed Tags --- */
+/* Hides extra stream tags, showing only the first three. */
+/*
+.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
+    display: none !important;
+}
+*/
+
+/* --- Hide "Gift a Sub" Button --- */
+/* Hides the "Gift a Sub" button located below the video player. */
+/*
+button[data-a-target="gift-button"] {
+    display: none !important;
+}
+*/
+
+/* --- Hide Hype Train Banner --- */
+/* Hides the Hype Train banner that appears at the top of chat. */
+/*
+.hype-train__banner {
+    display: none !important;
+}
+*/
 }

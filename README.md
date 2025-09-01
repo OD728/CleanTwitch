@@ -1,5 +1,5 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.8-blue.svg)
+![Version](https://img.shields.io/badge/version-1.9-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
@@ -65,6 +65,12 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+
+#### September 2025
+- ✅ **Added**: New optional rule to hide the Hype Train banner that appears above chat.
+- 🚀 **Improved**: Reorganized the "Optional Features" section into individual, commented-out blocks. This makes it much easier to enable or disable specific rules.
+- 🚀 **Improved**: Added descriptive comments for each optional rule to clarify what element it hides.
+- 
 #### August 2025
 - ✅ **Added**: Optional rule to hide promotional event banners (e.g., SUBtember banner).
 - 🔧 **Removed**: Viewer count and uptime text styling

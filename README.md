@@ -70,7 +70,7 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 - ✅ **Added**: New optional rule to hide the Hype Train banner that appears above chat.
 - 🚀 **Improved**: Reorganized the "Optional Features" section into individual, commented-out blocks. This makes it much easier to enable or disable specific rules.
 - 🚀 **Improved**: Added descriptive comments for each optional rule to clarify what element it hides.
-- 
+
 #### August 2025
 - ✅ **Added**: Optional rule to hide promotional event banners (e.g., SUBtember banner).
 - 🔧 **Removed**: Viewer count and uptime text styling

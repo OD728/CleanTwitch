@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      1.9
+@version      1.91
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -123,6 +123,10 @@ button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg pat
     display: none !important;
 }
 .InjectLayout-sc-1i43xsx-0.iDMNUO button:has(svg path[d*="M16 4H2v12h14v-3h2V7h-2V4zm-5.886"]) {
+    display: none !important;
+}
+/*Hide stream goals (Subs, Followers, Plus Goal) when window is collapsed */
+.Layout-sc-1xcs6mc-0.gUkfsA, .Layout-sc-1xcs6mc-0.cPAhDZ {
     display: none !important;
 }
 

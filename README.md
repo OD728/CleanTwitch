@@ -1,5 +1,5 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.9-blue.svg)
+![Version](https://img.shields.io/badge/version-1.92-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
@@ -65,6 +65,8 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+#### October 2025
+- ✅ **Added**: Hide "Go Ad-Free for Free" button – A new rule was added to remove the persistent promotional button that appears on stream pages, further cleaning up the UI.
 
 #### September 2025
 - ✅ **Added**: New optional rule to hide the Hype Train banner that appears above chat.

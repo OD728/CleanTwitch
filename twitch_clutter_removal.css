@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      1.92
+@version      1.93
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -10,7 +10,6 @@
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
-    
 /* Layout fixes */
 .Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
     order: -1 !important;
@@ -66,6 +65,12 @@ article:has(a[href*="/recaps/"]) {
     display: none !important;
 }
 
+/* Hide specific promotional/reward banners (e.g., Social Sharing Badges) */
+/* Targets the main container of the 'Get cred when you share a viral clip' banner */
+div[style*="social-sharing-badge-promo-banner.png"] {
+    display: none !important;
+}
+
 /* Center and style viewer count elements */
 .ffz--meta-tray,
 .ffz--native-viewers-container,
@@ -88,6 +93,17 @@ div[role="presentation"].cbxBks,
 .ffz-i-clock,
 .ffz-i-gauge {
     display: none !important;
+}
+
+/* Style viewer count and uptime text */
+strong[data-a-target="animated-channel-viewers-count"],
+strong[data-a-target="animated-channel-viewers-count"] span,
+.live-time > span[aria-hidden="true"],
+p[data-a-target="animated-channel-viewers-count"],
+.ffz-stat-text {
+    font-size: var(--font-size-6) !important;
+    font-weight: var(--font-weight-normal) !important;
+    line-height: var(--line-height-body) !important;
 }
 
 /* Hide redundant descriptions */
@@ -125,78 +141,27 @@ button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg pat
 .InjectLayout-sc-1i43xsx-0.iDMNUO button:has(svg path[d*="M16 4H2v12h14v-3h2V7h-2V4zm-5.886"]) {
     display: none !important;
 }
-/* Hide the "Go Ad-Free for Free" button (Working SVG rule) */
-button.ScCoreButton-sc-ocjdkq-0.gGttfb:has(svg path[d*="M10.114 9.622 11 7 7.175 9.323a.382.382 0 0 0 .013.65l.698.405L7 13l3.825-2.323a.382.382 0 0 0-.012-.65l-.699-.405z"]) {
-    display: none !important;
-}
-
-/*Hide stream goals (Subs, Followers, Plus Goal) when window is collapsed */
-.Layout-sc-1xcs6mc-0.gUkfsA, .Layout-sc-1xcs6mc-0.cPAhDZ {
-    display: none !important;
-}
 
 /* Hide chat elements */
 .ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
 .Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
     display: none !important;
 }
-    
-/*-------------------------------------------------------------------------------------------------------------------------*/
+
 /* Optional features (commented out by default) */
-/* To enable a feature, remove the /* and */
-
-/* --- Hide Pinned Chat Messages & Cheers --- */
-/* Hides paid pinned messages and cheer messages at the top of chat. */
-/*
-.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
-.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
-    display: none !important;
-}
-*/
-
-/* --- Hide Promotional Banners --- */
-/* Hides large promotional banners, like the SUBtember event banner. */
-/*
-div[style*="/subtember2025/"] {
-    display: none !important;
-}
-*/
-
-/* --- Hide Channel Leaderboards --- */
-/* Hides the entire rotating leaderboard for top cheerers and gifters. */
-/*
+/*.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
+.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors),
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
-.channel-leaderboard-header-rotating__users,
+.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4),
+button[data-a-target="gift-button"],*/
+.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
+    display: none !important;
+}
+/*.channel-leaderboard-header-rotating__users,
 button[aria-label="Previous leaderboard set"],
 button[aria-label="Next leaderboard set"],
 .channel-leaderboard-header-first-entry,
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
-}
-*/
-
-/* --- Limit Displayed Tags --- */
-/* Hides extra stream tags, showing only the first three. */
-/*
-.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
-    display: none !important;
-}
-*/
-
-/* --- Hide "Gift a Sub" Button --- */
-/* Hides the "Gift a Sub" button located below the video player. */
-/*
-button[data-a-target="gift-button"] {
-    display: none !important;
-}
-*/
-
-/* --- Hide Hype Train Banner --- */
-/* Hides the Hype Train banner that appears at the top of chat. */
-/*
-.hype-train__banner {
-    display: none !important;
-}
-*/
+}*/
 }

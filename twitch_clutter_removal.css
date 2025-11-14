@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      1.93
+@version      1.94
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -138,9 +138,14 @@ button[aria-label="Cheer"],
 button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg path[d*="M10.114 9.622"]) {
     display: none !important;
 }
-.InjectLayout-sc-1i43xsx-0.iDMNUO button:has(svg path[d*="M16 4H2v12h14v-3h2V7h-2V4zm-5.886"]) {
+/* Hide the 'Gift Turbo' button by its unique SVG icon path */
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
     display: none !important;
 }
+/* Hide the 'Go Ad-Free for Free' button by its unique SVG icon path */
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
+    display: none !important;
+}    
 
 /* Hide chat elements */
 .ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,

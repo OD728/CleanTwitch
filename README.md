@@ -1,5 +1,5 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.93-blue.svg)
+![Version](https://img.shields.io/badge/version-1.94-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 

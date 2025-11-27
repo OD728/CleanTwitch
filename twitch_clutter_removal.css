@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      1.94
+@version      2.00
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -10,7 +10,12 @@
 ==/UserStyle== */
 
 @-moz-document domain("twitch.tv") {
-/* Layout fixes */
+
+/* ------------------------------------------- */
+/* 1. GLOBAL LAYOUT AND NAVIGATION FIXES       */
+/* ------------------------------------------- */
+
+/* Layout fixes for the followed sidebar toggle */
 .Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
     order: -1 !important;
     margin-bottom: 10px !important;
@@ -20,12 +25,12 @@
     flex-direction: column !important;
 }
 
-/* Hide headers and titles */
+/* Hide general headers and titles (e.g., "FOLLOWED CHANNELS") */
 .iHfEta h1.tw-title, .kshrU h1.tw-title {
     display: none !important;
 }
 
-/* Hide stories and navigation */
+/* Hide stories and navigation elements (Sidebar) */
 .Layout-sc-1xcs6mc-0.dKitkM,
 .storiesLeftNavSection--csO9S,
 .Layout-sc-1xcs6mc-0.iGMbNn[style*="margin-top: 0.7rem"],
@@ -36,7 +41,7 @@
     background: transparent !important;
 }
 
-/* Hide search and input elements */
+/* Hide search input styling (removes border/shadow for cleaner look) */
 .tw-combo-input__button-icon--large {
     display: none !important;
 }
@@ -46,30 +51,70 @@ div[data-a-target="tray-search-input"] input {
     box-shadow: none !important;
 }
 
-/* Hide profile and user elements */
+/* ------------------------------------------- */
+/* 2. MONETIZATION AND PROMOTION CLUTTER       */
+/* ------------------------------------------- */
+
+/* Hide top navigation monetization elements (Get Bits, Right Column Collapse) */
+button[data-a-target="top-nav-get-bits-button"],
+button[data-a-target="right-column__toggle-collapse-btn"] {
+    display: none !important;
+}
+
+/* Hide chat/stream monetization elements (Cheer, One-Tap Combo) */
+button[aria-label="Cheer"],
+.oneTapIngressButton--inGsR {
+    display: none !important;
+}
+
+/* Hide the 'Gift Turbo' button by its unique SVG icon path */
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M10.114 9.622"]),
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
+    display: none !important;
+}
+
+/* Hide the 'Go Ad-Free for Free' button by its unique SVG icon path */
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
+    display: none !important;
+}
+
+/* Hide large promotional banners (e.g., SUBtember, Gift Expiration, Social Sharing) */
+div[style*="/subtember2025/"],
+.giftExpirationCallout--Y94PX,
+div[style*="social-sharing-badge-promo-banner.png"] {
+    display: none !important;
+}
+
+/* ------------------------------------------- */
+/* 3. STREAM INFO AND ABOUT PANEL CLUTTER      */
+/* ------------------------------------------- */
+
+/* Hide 'Share' button on the stream player and 'Whisper' on user cards */
 button[data-a-target="share-button"],
 .user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
     display: none !important;
 }
 
-/* Hide stream and content elements */
+/* Hide stream sections and headers (e.g., Subscription goal, About section content) */
 .Layout-sc-1xcs6mc-0.CNDKn,
 .Layout-sc-1xcs6mc-0.gOGOyJ,
 h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
     display: none !important;
 }
+
+/* Make the 'About' section panel background transparent */
 .Layout-sc-1xcs6mc-0.hgKyXI.about-section__panel--content {
     background-color: transparent !important;
 }
+
+/* Hide content recap banners/articles */
 article:has(a[href*="/recaps/"]) {
     display: none !important;
 }
 
-/* Hide specific promotional/reward banners (e.g., Social Sharing Badges) */
-/* Targets the main container of the 'Get cred when you share a viral clip' banner */
-div[style*="social-sharing-badge-promo-banner.png"] {
-    display: none !important;
-}
+/* ------------------------------------------- */
+/* 4. VIEWER COUNT AND METADATA STYLING (FFZ)  */
+/* ------------------------------------------- */
 
 /* Center and style viewer count elements */
 .ffz--meta-tray,
@@ -87,7 +132,7 @@ div[style*="social-sharing-badge-promo-banner.png"] {
     width: 100% !important;
 }
 
-/* Hide viewer count icons */
+/* Hide viewer count icons (Twitch and FFZ) */
 .ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg,
 div[role="presentation"].cbxBks,
 .ffz-i-clock,
@@ -106,67 +151,84 @@ p[data-a-target="animated-channel-viewers-count"],
     line-height: var(--line-height-body) !important;
 }
 
-/* Hide redundant descriptions */
+/* Hide redundant viewer count descriptions (e.g., "Viewers") */
 .video-player__container .kvrzxX > p.CoreText-sc-1txzju1-0,
 .channel-root__info .kvrzxX > p.CoreText-sc-1txzju1-0,
 .live-time > p.CoreText-sc-1txzju1-0 {
     display: none !important;
 }
 
-/* Hide directory and discovery elements */
-label[for="browse-sort-drop-down"],
+/* ------------------------------------------- */
+/* 5. CHAT CLUTTER                             */
+/* ------------------------------------------- */
+
+/* Hide the "New Item Indicator" next to Bits/Gift buttons in chat */
+.ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
+.Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
+    display: none !important;
+}    
+
+/* ------------------------------------------- */
+/* 6. DIRECTORY AND DISCOVERY CLUTTER          */
+/* ------------------------------------------- */
+
+/* Hide directory sorting label */
+label[for="browse-sort-drop-down"] {
+    display: none !important;
+}
+
+/* Hide Upcoming Streams, large category cards, and 'show more' separators */
 .vertical-selector-card__container--lg,
 header[aria-label="Upcoming Streams"],
 h2[data-a-target="upcoming-streams-header"],
 header:has(h2[data-a-target="upcoming-streams-header"]),
 .Layout-sc-1xcs6mc-0.show-more__hidden,
-.Layout-sc-1xcs6mc-0.kpJCgd {
-    display: none !important;
-}
+.Layout-sc-1xcs6mc-0.kpJCgd,
 header[aria-label="Upcoming Streams"] + div,
 header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
     display: none !important;
 }
 
-/* Hide monetization elements */
-button[data-a-target="top-nav-get-bits-button"],
-button[data-a-target="right-column__toggle-collapse-btn"],
-button[aria-label="Cheer"],
-.oneTapIngressButton--inGsR {
-    display: none !important;
-}
-button.ScCoreButton-sc-ocjdkq-0.kEIAKL:has(.ScCoreButtonIcon-sc-ypak37-0 svg path[d*="M10.114 9.622"]) {
-    display: none !important;
-}
-/* Hide the 'Gift Turbo' button by its unique SVG icon path */
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
-    display: none !important;
-}
-/* Hide the 'Go Ad-Free for Free' button by its unique SVG icon path */
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
-    display: none !important;
-}    
 
-/* Hide chat elements */
-.ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
-.Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
-    display: none !important;
-}
+/* ------------------------------------------- */
+/* Optional features (commented out by default)*/
+/* ------------------------------------------- */
 
-/* Optional features (commented out by default) */
+/* --- Hide Pinned Chat Messages & Cheers --- */
+/* Hides paid pinned messages and cheer messages at the top of chat. */
 /*.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
-.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors),
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
-.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4),
-button[data-a-target="gift-button"],*/
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users) {
+.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
     display: none !important;
-}
-/*.channel-leaderboard-header-rotating__users,
+}*/
+
+/* --- Hide Channel Leaderboards --- */
+/* Hides the entire rotating leaderboard for top cheerers and gifters. */
+/*.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
+.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
+.channel-leaderboard-header-rotating__users,
 button[aria-label="Previous leaderboard set"],
 button[aria-label="Next leaderboard set"],
 .channel-leaderboard-header-first-entry,
 .channel-leaderboard-header-runner-up-entry {
     display: none !important;
 }*/
+
+/* --- Limit Displayed Tags --- */
+/* Hides extra stream tags, showing only the first three. */
+/*.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
+    display: none !important;
+}*/
+
+/* --- Hide Hype Train Banner --- */
+/* Hides the Hype Train banner that appears at the top of chat. */
+/*.hype-train__banner {
+    display: none !important;
+}*/
+
+/* --- Hide "Gift a Sub" Button --- */
+/* Hides the "Gift a Sub" button located below the video player. */
+/*.button[data-a-target="gift-button"] {
+    display: none !important;
+}*/
+
 }

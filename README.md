@@ -1,5 +1,5 @@
 # Twitch.tv Clutter Removal CSS
-![Version](https://img.shields.io/badge/version-1.94-blue.svg)
+![Version](https://img.shields.io/badge/version-2.00-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 ![Stylus](https://img.shields.io/badge/stylus-compatible-brightgreen.svg)
 
@@ -37,7 +37,7 @@ Want to further enhance your Twitch experience? Here are some recommended additi
 
 ### 🌙 Theming
 -   **[Catppuccin for Twitch](https://github.com/catppuccin/userstyles/tree/main/styles/twitch)** - Beautiful, soothing pastel theme that works great with this clutter removal CSS
--   **[Twitch Title Truncator](https://github.com/OD728/STwitchT)** - A lightweight userscript that automatically truncates long Twitch stream titles and displays the full title on hover.
+-   **[Twitch Title Shortener](https://github.com/OD728/STwitchT)** - A lightweight userscript that automatically shortens long Twitch stream titles and displays the full title on hover.
 
 ### 🔧 Browser Extensions
 -   **[FrankerFaceZ](https://github.com/FrankerFaceZ/FrankerFaceZ)** - Comprehensive Twitch enhancement extension with extensive customization options
@@ -65,6 +65,10 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 ## 📋 Changelog
 
+#### November 2025
+- 🔧 **Fixed**: Updated the promotinal banners (Gift subs for them, 35% off for you)
+- 🚀 **Optimized**: Code optimization
+
 #### October 2025
 - ✅ **Added**: Hide Social Sharing Badge Promo Banner - Removed the large banner encouraging sharing of clips for badges.
 - 🚀 **Improved**: Leaderboard Visibility - The "Top Clips Leaderboard" is now hidden by default for reduced stream clutter.
@@ -77,7 +81,7 @@ Once you have FrankerFaceZ installed, consider these useful add-ons:
 
 #### August 2025
 - ✅ **Added**: Optional rule to hide promotional event banners (e.g., SUBtember banner).
-- 🔧 **Removed**: Viewer count and uptime text styling
+- 🗑️ **Removed**: Viewer count and uptime text styling
 
 #### July 2025
 - 🚀 Optimized: Code optimization – reduced file size by ~60% (from 8KB to 3KB) without losing functionality.

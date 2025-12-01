@@ -79,12 +79,7 @@ button[aria-label="Cheer"],
 }
 
 /* Hide large promotional banners (e.g., SUBtember, Gift Expiration, Social Sharing) */
-div[style*="/subtember2025/"],
-div[style*="social-sharing-badge-promo-banner.png"],
-/* --- Hides the Gift Expiration Callout banner and all its containing elements --- */
-.Layout-sc-1xcs6mc-0.kFLrqZ, 
-.giftExpirationCallout--Y94PX,
-div[class*="giftExpirationCallout--"] {
+.giftExpirationCalloutFinale--TZ3uy {
     display: none !important;
 }
 

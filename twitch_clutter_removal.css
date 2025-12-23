@@ -78,8 +78,12 @@ button[aria-label="Cheer"],
     display: none !important;
 }
 
-/* Hide large promotional banners (e.g., SUBtember, Gift Expiration, Social Sharing) */
-.giftExpirationCalloutFinale--TZ3uy {
+/* Hide large promotional banners (SUBtember, Gift Expiration, "Just For You" sub offers, etc.) */
+.giftExpirationCalloutFinale--TZ3uy,
+div.Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"],
+.Layout-sc-1xcs6mc-0:has(> .Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"]),
+.Layout-sc-1xcs6mc-0.kWTSin:has(.kbXNWp),
+.Layout-sc-1xcs6mc-0.kFLrqZ:has(.kbXNWp) {
     display: none !important;
 }
 

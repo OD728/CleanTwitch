@@ -1,7 +1,7 @@
 # 👾 CleanTwitch: Twitch Clutter Removal CSS
 A simple, powerful CSS stylesheet that removes distracting UI elements from Twitch.tv for a **cleaner, more focused viewing experience**. Works best when paired with **FrankerFaceZ (FFZ)**.
 
-![Version](https://img.shields.io/badge/version-2.00-blue.svg)
+![Version](https://img.shields.io/badge/version-2.01-blue.svg)
 ![Stylus](https://img.shields.io/badge/Stylus-Compatible-brightgreen.svg)
 
 ---
@@ -50,6 +50,7 @@ A comprehensive Twitch enhancement extension. Required for the advanced Viewer C
 
 ## ⚙️ Changelog Highlights (v2.00)
 
+* **Dezember 2025 Fixes**: Updated selectors promotional banners.
 * **November 2025 Fixes**: Updated selectors for Gift Turbo/Ad-Free buttons and promotional banners.
 * **October 2025 Additions**: Added rules to hide the new "Go Ad-Free for Free" button and the Social Sharing Badge Promo Banner.
 * **Enhanced Metadata**: Improved and unified styling for viewer count and uptime across Twitch and FFZ elements.

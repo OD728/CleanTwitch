@@ -16,6 +16,9 @@ Focus on the stream, not the noise. CleanTwitch removes the following elements:
 * **Chat**: "New Item Indicator" for Bits/Gifts. *Optional rules are available to hide leaderboards and pinned messages.*
 * **Visual Polish**: Removes search bar borders/shadows and makes the 'About' panel background transparent.
 * **Enhanced Statistics**: Unifies and centers the Viewer Count and Uptime display, specifically styling elements for a **clean FrankerFaceZ (FFZ)** metadata tray.
+---
+💡 **Optional Features:** The bottom of the stylesheet contains optional rules (disabled by default) to hide the **Hype Train**, **Channel Leaderboards**, **Pinned Chat Messages**, and the **"Gift a Sub"** button.
+Simply uncomment them to activate!
 
 ---
 

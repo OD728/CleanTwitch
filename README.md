@@ -1,7 +1,7 @@
 # 👾 CleanTwitch: Twitch Clutter Removal CSS
 A simple, powerful CSS stylesheet that removes distracting UI elements from Twitch.tv for a **cleaner, more focused viewing experience**. Works best when paired with **FrankerFaceZ (FFZ)**.
 
-![Version](https://img.shields.io/badge/version-2.01-blue.svg)
+![Version](https://img.shields.io/badge/version-2.02-blue.svg)
 ![Stylus](https://img.shields.io/badge/Stylus-Compatible-brightgreen.svg)
 
 ---

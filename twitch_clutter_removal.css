@@ -1,243 +1,263 @@
 /* ==UserStyle==
-@name         Twitch Clutter Removal
-@version      2.04
-@namespace    https://github.com/OD728/CleanTwitch
-@description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
-@author       OD728
-@homepageURL  https://github.com/OD728/CleanTwitch
-@supportURL   https://github.com/OD728/CleanTwitch/issues
-@license      No License
-==/UserStyle== */
+ @name         Twitch Clutter Removal
+ @version      3.00
+ @namespace    https://github.com/OD728/CleanTwitch
+ @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
+ @author       OD728
+ @homepageURL  https://github.com/OD728/CleanTwitch
+ @supportURL   https://github.com/OD728/CleanTwitch/issues
+ @license      No License
 
-@-moz-document domain("twitch.tv") {
-
-/* ------------------------------------------- */
-/* 1. GLOBAL LAYOUT AND NAVIGATION FIXES       */
-/* ------------------------------------------- */
-
-/* Layout fixes for the followed sidebar toggle */
-.Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
-    order: -1 !important;
-    margin-bottom: 10px !important;
-}
-.Layout-sc-1xcs6mc-0.hbssTE.followed-side-nav-header__dropdown-trigger {
-    display: flex !important;
-    flex-direction: column !important;
-}
-
-/* Hide general headers and titles (e.g., "FOLLOWED CHANNELS") */
-.iHfEta h1.tw-title, .kshrU h1.tw-title {
-    display: none !important;
-}
-
-/* Hide stories and navigation elements (Sidebar) */
-.Layout-sc-1xcs6mc-0.dKitkM,
-.storiesLeftNavSection--csO9S,
-.Layout-sc-1xcs6mc-0.iGMbNn[style*="margin-top: 0.7rem"],
-.Layout-sc-1xcs6mc-0.iGMbNn.storiesLeftNavSection--csO9S {
-    display: none !important;
-}
-.halo--FRPlG {
-    background: transparent !important;
-}
-
-/* Hide search input styling (removes border/shadow for cleaner look) */
-.tw-combo-input__button-icon--large {
-    display: none !important;
-}
-div[data-a-target="tray-search-input"],
-div[data-a-target="tray-search-input"] input {
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* ------------------------------------------- */
-/* 2. MONETIZATION AND PROMOTION CLUTTER       */
-/* ------------------------------------------- */
-
-/* Hide top navigation monetization elements (Get Bits, Right Column Collapse) */
-button[data-a-target="top-nav-get-bits-button"],
-button[data-a-target="right-column__toggle-collapse-btn"] {
-    display: none !important;
-}
-
-/* Hide chat/stream monetization elements (Cheer, One-Tap Combo) */
-button[aria-label="Cheer"],
-.oneTapIngressButton--inGsR {
-    display: none !important;
-}
-
-/* Hide the 'Gift Turbo' button by its unique SVG icon path */
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M10.114 9.622"]),
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
-    display: none !important;
-}
-
-/* Hide the 'Go Ad-Free for Free' button by its unique SVG icon path */
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
-    display: none !important;
-}
-
-/* Hide large promotional banners (SUBtember, Gift Expiration, Holiday Offers, etc.) */
-.giftExpirationCalloutFinale--TZ3uy,
-.giftExpirationCallout--Y94PX,
-.Layout-sc-1xcs6mc-0:has(> .giftExpirationCallout--Y94PX),
-div.Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"],
-.Layout-sc-1xcs6mc-0:has(> .Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"]),
-.Layout-sc-1xcs6mc-0.kWTSin:has(.kbXNWp),
-.Layout-sc-1xcs6mc-0.kFLrqZ:has(.kbXNWp) {
-    display: none !important;
-}
-
-/* ------------------------------------------- */
-/* 3. STREAM INFO AND ABOUT PANEL CLUTTER      */
-/* ------------------------------------------- */
-
-/* Hide 'Share' button on the stream player and 'Whisper' on user cards */
-button[data-a-target="share-button"],
-.user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
-    display: none !important;
-}
-
-/* Hide stream sections and headers (e.g., Subscription goal, About section content) */
-.Layout-sc-1xcs6mc-0.CNDKn,
-.Layout-sc-1xcs6mc-0.gOGOyJ,
-h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
-    display: none !important;
-}
-
-/* Make the 'About' section panel background transparent */
-.Layout-sc-1xcs6mc-0.hgKyXI.about-section__panel--content {
-    background-color: transparent !important;
-}
-
-/* Hide content recap banners/articles */
-article:has(a[href*="/recaps/"]) {
-    display: none !important;
-}
-
-/* ------------------------------------------- */
-/* 4. VIEWER COUNT AND METADATA STYLING (FFZ)  */
-/* ------------------------------------------- */
-
-/* Center and style viewer count elements */
-.ffz--meta-tray,
-.ffz--native-viewers-container,
-.live-time {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
-.video-player__container .kvrzxX,
-.channel-root__info .kvrzxX {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-}
-
-/* Hide viewer count icons (Twitch and FFZ) */
-.ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg,
-div[role="presentation"].cbxBks,
-.ffz-i-clock,
-.ffz-i-gauge {
-    display: none !important;
-}
-
-/* Style viewer count and uptime text */
-strong[data-a-target="animated-channel-viewers-count"],
-strong[data-a-target="animated-channel-viewers-count"] span,
-.live-time > span[aria-hidden="true"],
-p[data-a-target="animated-channel-viewers-count"],
-.ffz-stat-text {
-    font-size: var(--font-size-6) !important;
-    font-weight: var(--font-weight-normal) !important;
-    line-height: var(--line-height-body) !important;
-}
-
-/* Hide redundant viewer count descriptions (e.g., "Viewers") */
-.video-player__container .kvrzxX > p.CoreText-sc-1txzju1-0,
-.channel-root__info .kvrzxX > p.CoreText-sc-1txzju1-0,
-.live-time > p.CoreText-sc-1txzju1-0 {
-    display: none !important;
-}
-
-/* ------------------------------------------- */
-/* 5. CHAT CLUTTER                             */
-/* ------------------------------------------- */
-
-/* Hide the "New Item Indicator" next to Bits/Gift buttons in chat */
-.ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
-.Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
-    display: none !important;
-}    
-
-/* ------------------------------------------- */
-/* 6. DIRECTORY AND DISCOVERY CLUTTER          */
-/* ------------------------------------------- */
-
-/* Hide directory sorting label */
-label[for="browse-sort-drop-down"] {
-    display: none !important;
-}
-    
-/* Hide Recommended Categories in Sidebar */
-div[aria-label="Recommended Categories"] {
-    display: none !important;
-}
-
-/* Hide Upcoming Streams, large category cards, and 'show more' separators */
-.vertical-selector-card__container--lg,
-header[aria-label="Upcoming Streams"],
-h2[data-a-target="upcoming-streams-header"],
-header:has(h2[data-a-target="upcoming-streams-header"]),
-.Layout-sc-1xcs6mc-0.show-more__hidden,
-.Layout-sc-1xcs6mc-0.kpJCgd,
-header[aria-label="Upcoming Streams"] + div,
-header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
-    display: none !important;
-}
-
-
-/* ------------------------------------------- */
-/* Optional features (commented out by default)*/
-/* ------------------------------------------- */
-
-/* --- Hide Pinned Chat Messages & Cheers --- */
-/* Hides paid pinned messages and cheer messages at the top of chat. */
-/*.Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
+ @advanced dropdown hide-pinned "Hide Pinned Chat & Cheers" {
+ hide-pinned-off "Disabled*" <<<EOT  EOT;
+ hide-pinned-on  "Enabled"    <<<EOT
+ .Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
 .Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
-    display: none !important;
-}*/
+display: none !important;
+} EOT;
+}
 
-/* --- Hide Channel Leaderboards --- */
-/* Hides the entire rotating leaderboard for top cheerers and gifters. */
-/*.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
+@advanced dropdown hide-leaderboard "Hide Channel Leaderboards" {
+hide-leader-off "Disabled*" <<<EOT  EOT;
+hide-leader-on  "Enabled"    <<<EOT
+.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
 .channel-leaderboard-header-rotating__users,
 button[aria-label="Previous leaderboard set"],
 button[aria-label="Next leaderboard set"],
 .channel-leaderboard-header-first-entry,
 .channel-leaderboard-header-runner-up-entry {
-    display: none !important;
-}*/
+display: none !important;
+} EOT;
+}
 
-/* --- Limit Displayed Tags --- */
-/* Hides extra stream tags, showing only the first three. */
-/*.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
-    display: none !important;
-}*/
+@advanced dropdown limit-tags "Limit Displayed Tags (Show only 3)" {
+limit-tags-off "Disabled*" <<<EOT  EOT;
+limit-tags-on  "Enabled"    <<<EOT
+.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
+display: none !important;
+} EOT;
+}
 
-/* --- Hide Hype Train Banner --- */
-/* Hides the Hype Train banner that appears at the top of chat. */
-/*.hype-train__banner {
-    display: none !important;
-}*/
+@advanced dropdown hide-hype "Hide Hype Train Banner" {
+hide-hype-off "Disabled*" <<<EOT  EOT;
+hide-hype-on  "Enabled"    <<<EOT
+.hype-train__banner {
+display: none !important;
+} EOT;
+}
 
-/* --- Hide "Gift a Sub" Button --- */
-/* Hides the "Gift a Sub" button located below the video player. */
-/*.button[data-a-target="gift-button"],
+@advanced dropdown hide-gift "Hide 'Gift a Sub' Button" {
+hide-gift-off "Disabled*" <<<EOT  EOT;
+hide-gift-on  "Enabled"    <<<EOT
 button[data-a-target="gift-button"] {
-    display: none !important;
-}*/
+display: none !important;
+} EOT;
+}
+
+@advanced dropdown hide-turbo "Hide 'Get/Gift Turbo' Buttons" {
+hide-turbo-off "Disabled*" <<<EOT  EOT;
+hide-turbo-on  "Enabled"    <<<EOT
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M10.114 9.622"]),
+.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
+display: none !important;
+} EOT;
+}
+==/UserStyle== */
+
+@-moz-document domain("twitch.tv") {
+
+    /* ------------------------------------------- */
+    /* 1. GLOBAL LAYOUT AND NAVIGATION FIXES       */
+    /* ------------------------------------------- */
+
+    /* Layout fixes for the followed sidebar toggle */
+    .Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
+        order: -1 !important;
+        margin-bottom: 10px !important;
+    }
+    .Layout-sc-1xcs6mc-0.hbssTE.followed-side-nav-header__dropdown-trigger {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Hide general headers and titles (e.g., "FOLLOWED CHANNELS") */
+    .iHfEta h1.tw-title, .kshrU h1.tw-title {
+        display: none !important;
+    }
+
+    /* Hide stories and navigation elements (Sidebar) */
+    .Layout-sc-1xcs6mc-0.dKitkM,
+    .storiesLeftNavSection--csO9S,
+    .Layout-sc-1xcs6mc-0.iGMbNn[style*="margin-top: 0.7rem"],
+    .Layout-sc-1xcs6mc-0.iGMbNn.storiesLeftNavSection--csO9S {
+        display: none !important;
+    }
+    .halo--FRPlG {
+        background: transparent !important;
+    }
+
+    /* Hide search input styling (removes border/shadow for cleaner look) */
+    .tw-combo-input__button-icon--large {
+        display: none !important;
+    }
+    div[data-a-target="tray-search-input"],
+    div[data-a-target="tray-search-input"] input {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 2. MONETIZATION AND PROMOTION CLUTTER       */
+    /* ------------------------------------------- */
+
+    /* Hide top navigation monetization elements (Get Bits, Right Column Collapse) */
+    button[data-a-target="top-nav-get-bits-button"],
+    button[data-a-target="right-column__toggle-collapse-btn"] {
+        display: none !important;
+    }
+
+    /* Hide chat/stream monetization elements (Cheer, One-Tap Combo) */
+    button[aria-label="Cheer"],
+    .oneTapIngressButton--inGsR {
+        display: none !important;
+    }
+
+    /* Hide the 'Go Ad-Free for Free' button by its unique SVG icon path */
+    .InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
+        display: none !important;
+    }
+
+    /* Hide large promotional banners (SUBtember, Gift Expiration, Holiday Offers, etc.) */
+    .giftExpirationCalloutFinale--TZ3uy,
+    .giftExpirationCallout--Y94PX,
+    .Layout-sc-1xcs6mc-0:has(> .giftExpirationCallout--Y94PX),
+    div.Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"],
+    .Layout-sc-1xcs6mc-0:has(> .Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"]),
+    .Layout-sc-1xcs6mc-0.kWTSin:has(.kbXNWp),
+    .Layout-sc-1xcs6mc-0.kFLrqZ:has(.kbXNWp) {
+        display: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 3. STREAM INFO AND ABOUT PANEL CLUTTER      */
+    /* ------------------------------------------- */
+
+    /* Hide 'Share' button on the stream player and 'Whisper' on user cards */
+    button[data-a-target="share-button"],
+    .user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
+        display: none !important;
+    }
+
+    /* Hide stream sections and headers (e.g., Subscription goal, About section content) */
+    .Layout-sc-1xcs6mc-0.CNDKn,
+    .Layout-sc-1xcs6mc-0.gOGOyJ,
+    h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
+        display: none !important;
+    }
+
+    /* Make the 'About' section panel background transparent */
+    .Layout-sc-1xcs6mc-0.hgKyXI.about-section__panel--content {
+        background-color: transparent !important;
+    }
+
+    /* Hide content recap banners/articles */
+    article:has(a[href*="/recaps/"]) {
+        display: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 4. VIEWER COUNT AND METADATA STYLING (FFZ)  */
+    /* ------------------------------------------- */
+
+    /* Center and style viewer count elements */
+    .ffz--meta-tray,
+    .ffz--native-viewers-container,
+    .live-time {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+    .video-player__container .kvrzxX,
+    .channel-root__info .kvrzxX {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    /* Hide viewer count icons (Twitch and FFZ) */
+    .ScSvgWrapper-sc-wkgzod-0.koIGve.tw-svg,
+    div[role="presentation"].cbxBks,
+    .ffz-i-clock,
+    .ffz-i-gauge {
+        display: none !important;
+    }
+
+    /* Style viewer count and uptime text */
+    strong[data-a-target="animated-channel-viewers-count"],
+    strong[data-a-target="animated-channel-viewers-count"] span,
+    .live-time > span[aria-hidden="true"],
+    p[data-a-target="animated-channel-viewers-count"],
+    .ffz-stat-text {
+        font-size: var(--font-size-6) !important;
+        font-weight: var(--font-weight-normal) !important;
+        line-height: var(--line-height-body) !important;
+    }
+
+    /* Hide redundant viewer count descriptions (e.g., "Viewers") */
+    .video-player__container .kvrzxX > p.CoreText-sc-1txzju1-0,
+    .channel-root__info .kvrzxX > p.CoreText-sc-1txzju1-0,
+    .live-time > p.CoreText-sc-1txzju1-0 {
+        display: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 5. CHAT CLUTTER                             */
+    /* ------------------------------------------- */
+
+    /* Hide the "New Item Indicator" next to Bits/Gift buttons in chat */
+    .ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
+    .Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
+        display: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 6. DIRECTORY AND DISCOVERY CLUTTER          */
+    /* ------------------------------------------- */
+
+    /* Hide directory sorting label */
+    label[for="browse-sort-drop-down"] {
+        display: none !important;
+    }
+
+    /* Hide Recommended Categories in Sidebar */
+    div[aria-label="Recommended Categories"] {
+        display: none !important;
+    }
+
+    /* Hide Upcoming Streams, large category cards, and 'show more' separators */
+    .vertical-selector-card__container--lg,
+    header[aria-label="Upcoming Streams"],
+    h2[data-a-target="upcoming-streams-header"],
+    header:has(h2[data-a-target="upcoming-streams-header"]),
+    .Layout-sc-1xcs6mc-0.show-more__hidden,
+    .Layout-sc-1xcs6mc-0.kpJCgd,
+    header[aria-label="Upcoming Streams"] + div,
+    header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
+        display: none !important;
+    }
+
+    /* ------------------------------------------- */
+    /* 7. OPTIONAL USER-CONFIGURABLE STYLES        */
+    /* ------------------------------------------- */
+    /* The variables below are injected by Stylus  */
+
+    /*[[hide-pinned]]*/
+    /*[[hide-leaderboard]]*/
+    /*[[limit-tags]]*/
+    /*[[hide-hype]]*/
+    /*[[hide-gift]]*/
+    /*[[hide-turbo]]*/
+
 }

@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Twitch Clutter Removal
-@version      2.02
+@version      2.03
 @namespace    https://github.com/OD728/CleanTwitch
 @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
 @author       OD728
@@ -178,6 +178,11 @@ p[data-a-target="animated-channel-viewers-count"],
 
 /* Hide directory sorting label */
 label[for="browse-sort-drop-down"] {
+    display: none !important;
+}
+
+/* Hide Recommended Categories in Sidebar */
+div[aria-label="Recommended Categories"] {
     display: none !important;
 }
 

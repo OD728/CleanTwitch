@@ -106,10 +106,6 @@ display: none !important;
         border: none !important;
         box-shadow: none !important;
     }
-     /* Hide Roblox navigation link */
-    a[data-a-target="roblox-link"] {
-        display: none !important;
-    }
 
     /* ------------------------------------------- */
     /* 2. MONETIZATION AND PROMOTION CLUTTER       */
@@ -249,6 +245,11 @@ display: none !important;
     .Layout-sc-1xcs6mc-0.kpJCgd,
     header[aria-label="Upcoming Streams"] + div,
     header[aria-label="Upcoming Streams"] ~ div[class*="Layout-sc-"] {
+        display: none !important;
+    }
+    /* Hide Roblox navigation link */
+    a[data-a-target="roblox-link"],
+    .Layout-sc-1xcs6mc-0.fRzsnK:has(a[data-a-target="roblox-link"]) {
         display: none !important;
     }
 

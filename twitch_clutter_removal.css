@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.00
+ @version      3.01
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -105,6 +105,10 @@ display: none !important;
     div[data-a-target="tray-search-input"] input {
         border: none !important;
         box-shadow: none !important;
+    }
+     /* Hide Roblox navigation link */
+    a[data-a-target="roblox-link"] {
+        display: none !important;
     }
 
     /* ------------------------------------------- */

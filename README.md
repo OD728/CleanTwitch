@@ -28,6 +28,7 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 * **[Twitch Title Shortener](https://github.com/OD728/STwitchT)**: A userscript to keep long stream titles concise.
 
 ## Recent Updates
+* fixed leaderboard
 * Better Organization & Readability, Performance Optimizations
 * Added: Hide Roblox navigation link
 * Added: Hide Recommended Categories in Sidebar and fixed "Gift a Sub" button selector and a menu selector in stylus.

@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.04
+ @version      3.05
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -65,6 +65,15 @@ hide-turbo-off "Disabled*" <<<EOT  EOT;
 hide-turbo-on  "Enabled"    <<<EOT
 .InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M10.114 9.622"]),
 .InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
+display: none !important;
+} EOT;
+}
+
+@advanced dropdown hide-category-banner "Hide Category Info Panel/Banner" {
+hide-category-banner-off "Disabled*" <<<EOT  EOT;
+hide-category-banner-on  "Enabled"    <<<EOT
+.Layout-sc-1xcs6mc-0.enYjPs.directory-header-new__banner-cover,
+.directory-header-new__banner[data-test-selector="directory-banner-image"] {
 display: none !important;
 } EOT;
 }
@@ -274,5 +283,6 @@ display: none !important;
     /*[[hide-hype]]*/
     /*[[hide-gift]]*/
     /*[[hide-turbo]]*/
+    /*[[hide-category-banner]]*/
 
 }

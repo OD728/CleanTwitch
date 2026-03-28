@@ -29,6 +29,7 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 
 ## Recent Updates
 
+* added: hide TwitchCon banner
 * added an option to hide the category banner and info in a category
 * fixed leaderboard
 * Better Organization & Readability, Performance Optimizations

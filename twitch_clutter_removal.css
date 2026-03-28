@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.05
+ @version      3.06
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -167,6 +167,14 @@ display: none !important;
     /* New item indicators (notification badges) */
     .ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
     .Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
+        display: none !important;
+    }
+
+     /* TwitchCon promotional sticky footer banner */
+    footer#twilight-sticky-footer-root,
+    .Layout-sc-1xcs6mc-0.hsicxk.tc-upsell,
+    .tc-upsell__title,
+    .tc-upsell__button {
         display: none !important;
     }
 

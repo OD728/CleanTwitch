@@ -29,12 +29,10 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 
 ## Recent Updates
 
-* added: hide Plus Program eligibility banner above chat
-* added: hide TwitchCon banner
-* added an option to hide the category banner and info in a category
-* fixed leaderboard
-* Better Organization & Readability, Performance Optimizations
-* Added: Hide Roblox navigation link
-* Added: Hide Recommended Categories in Sidebar and fixed "Gift a Sub" button selector and a menu selector in stylus.
-* Updated selectors for "Go Ad-Free for Free" buttons and promotional banners (Late 2025).
-* Improved alignment and styling for viewer count and uptime displays.
+### Version 3.13
+- **New Features:** Added options to hide the Plus Program eligibility banner, TwitchCon promotional footer, and category info banners.
+- **Navigation Cleanup:** Added selectors to hide the Roblox navigation link and the "Recommended Categories" sidebar section.
+- **Bug Fixes:** Fixed the Channel Leaderboard selectors and updated the "Gift a Sub" button selector for compatibility with recent Twitch updates.
+- **Performance:** Optimized CSS selectors and removed redundant rules for better loading speed.
+- **Visuals:** Improved alignment and styling for FFZ viewer count and uptime displays.
+- **Maintenance:** Updated selectors for "Go Ad-Free for Free" buttons and other late-2025 promotional banners.

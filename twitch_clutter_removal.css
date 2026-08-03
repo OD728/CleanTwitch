@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.10
+ @version      3.13
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -23,6 +23,10 @@ hide-leader-on  "Enabled"    <<<EOT
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channelLeaderboardHeaderRotating__users--eqqYb),
 .Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
+.tw-transition-group:has(button[aria-label*="Leaderboard"]),
+.Layout-sc-1xcs6mc-0.gmnaBI:has(button[aria-label*="Leaderboard"]),
+.Layout-sc-1xcs6mc-0.fEYQhT:has(button[aria-label*="Leaderboard"]),
+.Layout-sc-1xcs6mc-0.gAZpEX:has(button[aria-label*="Leaderboard"]),
 .channelLeaderboardHeaderRotating__users--eqqYb,
 .channel-leaderboard-header-rotating__users,
 button[aria-label="Previous leaderboard set"],
@@ -185,6 +189,7 @@ display: none !important;
         display: none !important;
     }
 
+
     /* Hide Sub Goal Banner above chat */
     div[aria-label="Sub Goal"],
     .tw-transition-group:has(div[aria-label="Sub Goal"]),
@@ -291,12 +296,6 @@ display: none !important;
     .vertical-selector-card__container--lg,
     .Layout-sc-1xcs6mc-0.show-more__hidden,
     .Layout-sc-1xcs6mc-0.kpJCgd {
-        display: none !important;
-    }
-
-    /* Hide Roblox promotional link */
-    a[data-a-target="roblox-link"],
-    .Layout-sc-1xcs6mc-0.fRzsnK:has(a[data-a-target="roblox-link"]) {
         display: none !important;
     }
 

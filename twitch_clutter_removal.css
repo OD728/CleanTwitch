@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.13
+ @version      3.20
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -8,51 +8,11 @@
  @supportURL   https://github.com/OD728/CleanTwitch/issues
  @license      No License
 
- @advanced dropdown hide-pinned "Hide Pinned Chat & Cheers" {
- hide-pinned-off "Disabled*" <<<EOT  EOT;
- hide-pinned-on  "Enabled"    <<<EOT
- .Layout-sc-1xcs6mc-0.cZGSAi.paid-pinned-chat-message-list,
-.Layout-sc-1xcs6mc-0.bmOgKy:has(.pinned-cheer-colors) {
-display: none !important;
-} EOT;
-}
-
-@advanced dropdown hide-leaderboard "Hide Channel Leaderboards" {
-hide-leader-off "Disabled*" <<<EOT  EOT;
-hide-leader-on  "Enabled"    <<<EOT
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.bits-leaderboard-expanded-top-three-entry),
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.channelLeaderboardHeaderRotating__users--eqqYb),
-.Layout-sc-1xcs6mc-0.eOHCrm:has(.channel-leaderboard-header-rotating__users),
-.tw-transition-group:has(button[aria-label*="Leaderboard"]),
-.Layout-sc-1xcs6mc-0.gmnaBI:has(button[aria-label*="Leaderboard"]),
-.Layout-sc-1xcs6mc-0.fEYQhT:has(button[aria-label*="Leaderboard"]),
-.Layout-sc-1xcs6mc-0.gAZpEX:has(button[aria-label*="Leaderboard"]),
-.channelLeaderboardHeaderRotating__users--eqqYb,
-.channel-leaderboard-header-rotating__users,
-button[aria-label="Previous leaderboard set"],
-button[aria-label="Next leaderboard set"],
-button[aria-label*="Leaderboard"],
-.channelLeaderboardHeaderFirstEntry--EIoHL,
-.channel-leaderboard-header-first-entry,
-.channelLeaderboardHeaderRunnerUpEntry--sQ_Fp,
-.channel-leaderboard-header-runner-up-entry {
-display: none !important;
-} EOT;
-}
-
 @advanced dropdown limit-tags "Limit Displayed Tags (Show only 3)" {
 limit-tags-off "Disabled*" <<<EOT  EOT;
 limit-tags-on  "Enabled"    <<<EOT
-.InjectLayout-sc-1i43xsx-0.dwGPiE > .InjectLayout-sc-1i43xsx-0:nth-child(n+4) {
-display: none !important;
-} EOT;
-}
-
-@advanced dropdown hide-hype "Hide Hype Train Banner" {
-hide-hype-off "Disabled*" <<<EOT  EOT;
-hide-hype-on  "Enabled"    <<<EOT
-.hype-train__banner {
-display: none !important;
+div:has(> .tw-tag):nth-of-type(n+4) {
+    display: none !important;
 } EOT;
 }
 
@@ -64,20 +24,31 @@ display: none !important;
 } EOT;
 }
 
-@advanced dropdown hide-turbo "Hide 'Get/Gift Turbo' Buttons" {
-hide-turbo-off "Disabled*" <<<EOT  EOT;
-hide-turbo-on  "Enabled"    <<<EOT
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M10.114 9.622"]),
-.InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35 3.12"]) {
+@advanced dropdown hide-category-banner "Hide Category Info Panel/Banner" {
+hide-category-banner-off "Disabled*" <<<EOT  EOT;
+hide-category-banner-on  "Enabled"    <<<EOT
+.directory-header-new__banner-cover,
+div[data-test-selector="directory-banner-image"] {
 display: none !important;
 } EOT;
 }
 
-@advanced dropdown hide-category-banner "Hide Category Info Panel/Banner" {
-hide-category-banner-off "Disabled*" <<<EOT  EOT;
-hide-category-banner-on  "Enabled"    <<<EOT
-.Layout-sc-1xcs6mc-0.enYjPs.directory-header-new__banner-cover,
-.directory-header-new__banner[data-test-selector="directory-banner-image"] {
+@advanced dropdown hide-hypetrain "Hide Hype Train Banner" {
+hide-hypetrain-off "Disabled*" <<<EOT  EOT;
+hide-hypetrain-on  "Enabled"    <<<EOT
+div:has(> button[aria-label*="Hype Train"]),
+div[class*="hypeTrainBanner"] {
+display: none !important;
+} EOT;
+}
+
+@advanced dropdown hide-about-goals "Hide About Section Goal Trackers" {
+hide-about-goals-off "Disabled*" <<<EOT  EOT;
+hide-about-goals-on  "Enabled"    <<<EOT
+.about-section__actions:has(div[aria-label*="HYPE"]),
+.about-section__actions:has(div[aria-label*="Goal"]),
+.about-section__actions:has(div[aria-label*="Bits"]),
+.about-section__actions:has(a[href*="/article/plus-program"]) {
 display: none !important;
 } EOT;
 }
@@ -89,44 +60,51 @@ display: none !important;
     /* 1. GLOBAL LAYOUT AND NAVIGATION           */
     /* ========================================== */
 
-    /* Sidebar toggle layout fixes */
-    .Layout-sc-1xcs6mc-0.jdNosq.collapse-toggle {
-        order: -1 !important;
-        margin-bottom: 10px !important;
-    }
-
-    .Layout-sc-1xcs6mc-0.hbssTE.followed-side-nav-header__dropdown-trigger {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    /* Hide sidebar headers and titles */
-    .iHfEta h1.tw-title,
-    .kshrU h1.tw-title {
+    /* Hide the three dots (more options) menu button */
+    button[data-a-target="ellipsis-button"] {
         display: none !important;
     }
 
-    /* Hide stories and promotional navigation sections */
-    .Layout-sc-1xcs6mc-0.dKitkM,
+    /* Hide main title strictly on the Following directory page */
+    body:has(a[href="/directory/following"][aria-current="page"]) main h1.tw-title,
+    body:has(a[href="/directory/following"].active) main h1.tw-title {
+        display: none !important;
+    }
+
+    /* Hide Stories Following/Sidebar */
+    .Layout-sc-1xcs6mc-0.iXVlMj,
     .storiesLeftNavSection--csO9S,
-    .Layout-sc-1xcs6mc-0.iGMbNn[style*="margin-top: 0.7rem"],
-    .Layout-sc-1xcs6mc-0.iGMbNn.storiesLeftNavSection--csO9S {
+    .Layout-sc-1xcs6mc-0.dQMmwU:has(.storiesLeftNavSectionCollapsedButton--txKvw) {
         display: none !important;
     }
 
+    /* Hide Stories Border */
     .halo--FRPlG {
         background: transparent !important;
     }
 
-    /* Clean search input appearance */
-    .tw-combo-input__button-icon--large,
+    /* Remove borders, shadows, and outlines from controls */
     div[data-a-target="tray-search-input"],
-    div[data-a-target="tray-search-input"] input {
+    div[data-a-target="tray-search-input"] input,
+    .ScInputContainer-sc-vu7u7d-3,
+    .ScInputContainer-sc-vu7u7d-3 *,
+    #dropdown-search-input,
+    .tw-select-button,
+    #browse-sort-drop-down,
+    .ScCustomSelectButton-sc-1ubzx31-1 {
         border: none !important;
         box-shadow: none !important;
+        outline: none !important;
     }
 
-    .tw-combo-input__button-icon--large {
+    /* Hide search icons */
+    .tw-combo-input__button-icon--large,
+    .tw-input__icon {
+        display: none !important;
+    }
+
+    /* User card whisper button */
+    .user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
         display: none !important;
     }
 
@@ -136,47 +114,24 @@ display: none !important;
 
     /* Top navigation monetization buttons */
     button[data-a-target="top-nav-get-bits-button"],
-    button[data-a-target="right-column__toggle-collapse-btn"],
     button[aria-label="Cheer"],
     button[data-a-target="share-button"] {
         display: none !important;
     }
 
-    /* Chat monetization elements */
-    .oneTapIngressButton--inGsR {
-        display: none !important;
-    }
-
-    /* User card whisper button */
-    .user-card__buttons-container button[data-a-target="usercard-whisper-button"] {
-        display: none !important;
-    }
-
-    /* Ad-free promotional button (matched by SVG path) */
-    .InjectLayout-sc-1i43xsx-0.iDMNUO:has(svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
-        display: none !important;
-    }
-
-    /* Large promotional banners */
-    .giftExpirationCalloutFinale--TZ3uy,
-    .giftExpirationCallout--Y94PX,
-    .giftExpirationCalloutCreatorLed--MnvcU,
-    .Layout-sc-1xcs6mc-0:has(> .giftExpirationCallout--Y94PX),
-    .Layout-sc-1xcs6mc-0:has(> .giftExpirationCalloutCreatorLed--MnvcU),
-    div.Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"],
-    .Layout-sc-1xcs6mc-0:has(> .Layout-sc-1xcs6mc-0.kbXNWp[style*="Channel_Promo_Banner_Web.avif"]),
-    .Layout-sc-1xcs6mc-0.kWTSin:has(.kbXNWp),
-    .Layout-sc-1xcs6mc-0.kFLrqZ:has(.kbXNWp) {
+    /* Hide 'Ad-Free' / Gift Turbo Promotion Button */
+    div.InjectLayout-sc-1i43xsx-0:has(> button svg path[d*="M19 5H2v14h17v-3h3V8h-3V5Zm-6 3-5.35"]),
+    div.InjectLayout-sc-1i43xsx-0:has(> button svg path[d*="M2 19V5h17v3h3v8h-3v3H2Z"]) {
         display: none !important;
     }
 
     /* New item indicators (notification badges) */
-    .ScNewItemIndicatorWrapper-sc-1udtibe-2.lbpZbS.tw-new-item-indicator__container,
-    .Layout-sc-1xcs6mc-0.ScNewItemIndicatorMask-sc-1udtibe-1.kjWTWh.BuxeZ {
+    .tw-new-item-indicator__container,
+    div[class*="ScNewItemIndicator"] {
         display: none !important;
     }
 
-     /* TwitchCon promotional sticky footer banner */
+    /* TwitchCon promotional sticky footer banner */
     footer#twilight-sticky-footer-root,
     .Layout-sc-1xcs6mc-0.hsicxk.tc-upsell,
     .tc-upsell__title,
@@ -184,21 +139,18 @@ display: none !important;
         display: none !important;
     }
 
-     /* Hide Gift Sub Discount Promo Banner */
+    /* Hide Gift Sub Discount Promo Banner */
     div[aria-label="Gift sub discount promotion"] {
         display: none !important;
     }
 
-
-    /* Hide Sub Goal Banner above chat */
-    div[aria-label="Sub Goal"],
-    .tw-transition-group:has(div[aria-label="Sub Goal"]),
-    .Layout-sc-1xcs6mc-0:has(> div[aria-label="Sub Goal"]) {
-        display: none !important;
-    }
- 
-    /* Hide the entire Plus banner container */
-    .Layout-sc-1xcs6mc-0.eSKdYr:has(button[aria-label*="Plus Program"]) {
+    /* Permanently hide all Top Leaderboard bars (Cheer, Gifters, etc.) and their nav arrows */
+    div:has(> div > div > button[aria-label="Previous leaderboard set"]),
+    div:has(> div > div > button[aria-label="Next leaderboard set"]),
+    div:has(> .channelLeaderboardHeaderRotating__users--eqqYb),
+    div:has(> div > .channelLeaderboardHeaderRotating__users--eqqYb),
+    .tw-transition-group:has(button[aria-label*="Leaderboard"]),
+    div:has(> button[aria-label*="Leaderboard"]) {
         display: none !important;
     }
 
@@ -206,16 +158,21 @@ display: none !important;
     /* 3. STREAM INFO & ABOUT SECTION            */
     /* ========================================== */
 
-    /* Hide specific stream sections */
+    /* Hide specific stream sections (Name, Checkmark etc.) */
     .Layout-sc-1xcs6mc-0.CNDKn,
     .Layout-sc-1xcs6mc-0.gOGOyJ,
+    .Layout-sc-1xcs6mc-0.dzSuJq,
     h3.CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.tw-title {
         display: none !important;
     }
 
-    /* Transparent about section background */
-    .Layout-sc-1xcs6mc-0.hgKyXI.about-section__panel--content {
+    /* Make About section transparent and remove borders */
+    .about-section__panel,
+    .about-section__panel--content,
+    div:has(> .about-section__panel) {
         background-color: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
     /* Hide content recap articles */
@@ -303,12 +260,10 @@ display: none !important;
     /* 6. USER-CONFIGURABLE OPTIONS              */
     /* ========================================== */
 
-    /*[[hide-pinned]]*/
-    /*[[hide-leaderboard]]*/
     /*[[limit-tags]]*/
-    /*[[hide-hype]]*/
     /*[[hide-gift]]*/
-    /*[[hide-turbo]]*/
     /*[[hide-category-banner]]*/
+    /*[[hide-hypetrain]]*/
+    /*[[hide-about-goals]]*/
 
 }

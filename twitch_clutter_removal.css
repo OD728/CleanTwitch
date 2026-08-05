@@ -67,7 +67,8 @@ display: none !important;
 
     /* Hide main title strictly on the Following directory page */
     body:has(a[href="/directory/following"][aria-current="page"]) main h1.tw-title,
-    body:has(a[href="/directory/following"].active) main h1.tw-title {
+    body:has(a[href="/directory/following"].active) main h1.tw-title,
+    .CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.hqxAFh.GsAAv.tw-title {
         display: none !important;
     }
 

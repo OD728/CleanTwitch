@@ -13,8 +13,8 @@ CleanTwitch is a CSS stylesheet designed to remove distracting UI elements from 
 
 ## Installation
 
-1. Install a CSS manager extension such as Stylus.
-2. Copy the content of `twitch_clutter_removal.css`.
+1. Install a CSS manager extension such as [Stylus](https://github.com/openstyles/stylus).
+2. Copy the content of `twitch_clutter_removal.css` or use [Usersyles](https://userstyles.world/style/22655)
 3. Create a new style in Stylus, paste the code, and set the domain to `twitch.tv`.
 
 ## Recommended Configuration

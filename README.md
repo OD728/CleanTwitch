@@ -30,6 +30,6 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 
 ## Recent Updates
 
-### Version 3.20
+### Version 3.22
 
 * **FIXING STUFF**

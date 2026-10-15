@@ -1,6 +1,6 @@
 /* ==UserStyle==
  @name         Twitch Clutter Removal
- @version      3.22
+ @version      3.25
  @namespace    https://github.com/OD728/CleanTwitch
  @description  A simple CSS stylesheet that removes distracting UI elements from Twitch.tv for a cleaner, more focused viewing experience. Works best with FFZ
  @author       OD728
@@ -20,6 +20,15 @@ div:has(> .tw-tag):nth-of-type(n+4) {
 hide-gift-off "Disabled*" <<<EOT  EOT;
 hide-gift-on  "Enabled"    <<<EOT
 button[data-a-target="gift-button"] {
+display: none !important;
+} EOT;
+}
+
+@advanced dropdown hide-prime "Hide Prime Offers Button" {
+hide-prime-off "Disabled*" <<<EOT  EOT;
+hide-prime-on  "Enabled"    <<<EOT
+.top-nav__prime,
+button[data-a-target="prime-offers-icon"] {
 display: none !important;
 } EOT;
 }
@@ -71,11 +80,15 @@ display: none !important;
     .CoreText-sc-1txzju1-0.ScTitleText-sc-d9mj2s-0.hqxAFh.GsAAv.tw-title {
         display: none !important;
     }
-
-    /* Hide Stories Following/Sidebar */
-    .Layout-sc-1xcs6mc-0.iXVlMj,
-    .storiesLeftNavSection--csO9S,
-    .Layout-sc-1xcs6mc-0.dQMmwU:has(.storiesLeftNavSectionCollapsedButton--txKvw) {
+    
+    /* Hide All Twitch Stories (Expanded, Collapsed, Sidebar Avatars, and Wrappers) */
+    .storiesLeftNavSection--TTJzc,
+    .storiesLeftNavSectionCollapsedButton--TTJzc,
+    .Layout-sc-1xcs6mc-0.dQMmwU:has(.storiesLeftNavSection--TTJzc),
+    .Layout-sc-1xcs6mc-0.dQMmwU:has(.storiesLeftNavSectionCollapsedButton--TTJzc),
+    .Layout-sc-1xcs6mc-0:has(> .sr-only.fJYwSz),
+    .avatarHaloContainer--dFgwe,
+    .avatar--dFgwe:has(button[aria-label*="stories"]) {
         display: none !important;
     }
 
@@ -267,6 +280,7 @@ display: none !important;
 
     /*[[limit-tags]]*/
     /*[[hide-gift]]*/
+    /*[[hide-prime]]*/
     /*[[hide-category-banner]]*/
     /*[[hide-hypetrain]]*/
     /*[[hide-about-goals]]*/

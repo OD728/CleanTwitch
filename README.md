@@ -30,6 +30,7 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 
 ## Recent Updates
 
-### Version 3.22
+### Version 3.25
 
-* **FIXING STUFF**
+* **Added Option**: Added a toggle dropdown to hide the top navigation Prime Offers button.
+* **Stories Cleanup**: Unified and expanded selectors to cleanly remove all variations of Twitch stories (expanded, collapsed sidebar state, and avatar lists).

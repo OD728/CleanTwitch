@@ -30,5 +30,8 @@ For proper metadata styling, the following FrankerFaceZ settings are required un
 
 ## Recent Updates
 
+### Version 3.29
+* **Promos**: Hides the GTA VI launch bottom banner ("GTAVI is LIVE") and other event bottom banners.
+
 ### Version 3.28
 * **Directory Cleanup**: Hides the new "Recent Recaps" carousel on category pages.

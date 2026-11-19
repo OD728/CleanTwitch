@@ -151,7 +151,7 @@ display: none !important;
     }
 
     /* Hide Promotional Banners (TwitchCon, Gift Sub Discounts, SUBtember) */
-    footer#twilight-sticky-footer-root,
+    #twilight-sticky-footer-root,
     .Layout-sc-1xcs6mc-0.hsicxk.tc-upsell,
     .tc-upsell__title,
     .tc-upsell__button,
@@ -162,7 +162,6 @@ display: none !important;
     }
 
     /* Hide event bottom banners (GTA VI launch, etc.) wherever Twitch mounts them */
-    #twilight-sticky-footer-root,
     div[class*="banner--"]:has(> img[src*="bottom-banner"]),
     div:has(> img[src*="twilight-static-assets/gta6"]),
     a[href="/directory/category/grand-theft-auto-vi"][class*="button--"] {

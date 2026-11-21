@@ -1,6 +1,6 @@
 # CleanTwitch: Twitch Clutter Removal CSS
 
-CleanTwitch is a CSS stylesheet designed to remove distracting UI elements from Twitch.tv for a focused viewing experience. It is optimized for use with FrankerFaceZ (FFZ).
+**Twitch CSS:** CleanTwitch is a CSS stylesheet designed to remove distracting UI elements from Twitch.tv for a focused viewing experience. It is optimized for use with FrankerFaceZ (FFZ).
 
 ## Features
 
